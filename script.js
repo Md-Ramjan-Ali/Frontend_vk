@@ -211,7 +211,7 @@ document.addEventListener('DOMContentLoaded', () => {
       setText('drawer-badge',           key);
       return;
     }
-    setText('drawer-title',           d.stepName       || 'Process Details');
+    setText('drawer-title',           'Process Details');
     setText('drawer-step-name',       d.stepName       || key);
     setText('drawer-objective',       d.objective      || '');
     setText('drawer-description',     d.description    || '');
