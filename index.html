@@ -1,0 +1,1812 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Company Workflow Canvas</title>
+  <meta name="description" content="Interactive Company Workflow Canvas" />
+  <link rel="stylesheet" href="style.css">
+  <style>
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      background-color: #ffffff;
+      overflow: hidden;
+    }
+
+    /* Modern scrollbar styles for canvas wrapper */
+    #canvas-wrapper::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    #canvas-wrapper::-webkit-scrollbar-track {
+      background: #f1f5f9;
+    }
+    #canvas-wrapper::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 4px;
+    }
+    #canvas-wrapper::-webkit-scrollbar-thumb:hover {
+      background: #94a3b8;
+    }
+
+    /* Premium hover effects for nodes */
+    .cursor-pointer {
+      transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), filter 0.2s ease, opacity 0.2s ease;
+      transform-origin: center;
+    }
+    .cursor-pointer:hover {
+      transform: scale(1.15) !important;
+      filter: drop-shadow(0 4px 12px rgba(2, 178, 79, 0.45));
+      opacity: 0.95;
+    }
+
+    /* Drawer smooth slide transition rules */
+    #drawer-panel {
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.35s ease;
+    }
+    #drawer-panel.translate-x-full {
+      transform: translateX(100%);
+      opacity: 0.8;
+    }
+  </style>
+</head>
+
+<body class="w-full h-full bg-white overflow-hidden">
+  <div id="canvas-wrapper" class="w-full h-full bg-white" style="overflow:hidden; position:relative;">
+    <div id="canvas-container" style="position: relative; overflow: visible;">
+      <div id="canvas-root" style="width: 1920px; min-height: 1080px; position: relative; transform-origin: top left;">
+      <div class="bg-white relative size-full" data-name="Company Workflow">
+        <div
+          class="absolute bg-[#ccd5dc] border border-[#aebac6] border-solid h-[323.663px] left-[512.21px] top-[253.34px] w-[1025.734px]">
+        </div>
+        <div class="absolute bg-[#d9d9d9] h-[177.025px] left-[65.66px] top-[67.63px] w-[794.57px]"></div>
+        <div class="absolute bg-[#d9d9d9] h-[287.94px] left-[65.66px] top-[205.06px] w-[434.152px]"></div>
+        <div class="absolute h-[68.985px] left-[181.34px] top-[77px] w-[578.875px]">
+          <div class="absolute flex items-center justify-center left-[509.89px] size-[68.985px] top-0">
+            <div class="flex-none rotate-90">
+              <div class="relative size-[68.985px]">
+                <div class="absolute bottom-1/4 left-[6.7%] right-[6.7%] top-0"><svg class="block size-full" fill="none"
+                    preserveAspectRatio="none" viewBox="0 0 59.7426 51.7386">
+                    <path d="M29.8713 0L59.7426 51.7386H0L29.8713 0Z" fill="var(--fill-0, #5F82A0)" id="Polygon 2">
+                    </path>
+                  </svg></div>
+              </div>
+            </div>
+          </div>
+          <div class="absolute h-[22.586px] left-[177.71px] top-[23.2px] w-[172.57px]">
+            <div class="absolute bg-transparent h-[22.586px] left-0 top-0 w-[172.57px]"></div>
+            <div
+              class="-translate-x-1/2 -translate-y-1/2 [word-break:break-word] absolute flex flex-col font-[&#x27;Open_Sans:SemiBold&#x27;,sans-serif] font-semibold justify-center leading-[0] left-1/2 text-[#0f1117] text-[14px] text-center top-1/2 tracking-[0.3555px] whitespace-nowrap"
+              style="font-variation-settings:&quot;wdth&quot; 100">
+              <p class="leading-[20px]">TE</p>
+            </div>
+          </div>
+          <div class="absolute content-stretch flex flex-col gap-[16px] items-start left-0 top-[16.49px] w-[528px]">
+            <div class="bg-[#5f82a0] h-[36px] relative shrink-0 w-full" data-name="Frame"></div>
+            <div class="content-stretch flex items-center relative shrink-0">
+              <div class="h-[28.329px] mr-[-14px] relative shrink-0 w-[113.747px]">
+                <div class="absolute h-[28.329px] left-0 top-0 w-[113.747px]"><svg
+                    class="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none"
+                    viewBox="0 0 113.747 28.3291">
+                    <path d="M92.1318 0.5L112.839 14.5811L92.1396 27.8291H0.5V0.5H92.1318Z"
+                      fill="var(--fill-0, #E8E8E6)" id="Rectangle 3" stroke="var(--stroke-0, #AFB4B7)"></path>
+                  </svg></div>
+                <div class="absolute bg-transparent h-[20.134px] left-[12.73px] top-[4.1px] w-[63.148px]"></div>
+                <div
+                  class="-translate-x-1/2 -translate-y-1/2 [word-break:break-word] absolute flex flex-col font-[&#x27;Open_Sans:SemiBold&#x27;,sans-serif] font-semibold justify-center leading-[0] left-[calc(50%-12.57px)] text-[#0f1117] text-[10.078px] text-center top-1/2 tracking-[0.2559px] whitespace-nowrap"
+                  style="font-variation-settings:&quot;wdth&quot; 100">
+                  <p class="leading-[14.398px]">1</p>
+                </div>
+              </div>
+              <div class="h-[28.329px] mr-[-14px] relative shrink-0 w-[113.747px]">
+                <div class="absolute h-[28.329px] left-0 top-0 w-[113.747px]"><svg
+                    class="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none"
+                    viewBox="0 0 113.747 28.3291">
+                    <path
+                      d="M92.1318 0.5L112.839 14.5811L92.1396 27.8291H1.55371L19.416 15L19.9648 14.6055L19.4277 14.1963L1.47949 0.5H92.1318Z"
+                      fill="var(--fill-0, #E8E8E6)" id="Rectangle 3" stroke="var(--stroke-0, #AFB4B7)"></path>
+                  </svg></div>
+                <div class="absolute bg-transparent h-[20.134px] left-[21.5px] top-[4.1px] w-[63.148px]"></div>
+                <div
+                  class="-translate-x-1/2 -translate-y-1/2 [word-break:break-word] absolute flex flex-col font-[&#x27;Open_Sans:SemiBold&#x27;,sans-serif] font-semibold justify-center leading-[0] left-[calc(50%-3.8px)] text-[#0f1117] text-[10.078px] text-center top-1/2 tracking-[0.2559px] whitespace-nowrap"
+                  style="font-variation-settings:&quot;wdth&quot; 100">
+                  <p class="leading-[14.398px]">2</p>
+                </div>
+              </div>
+              <div class="h-[28.329px] mr-[-14px] relative shrink-0 w-[113.747px]">
+                <div class="absolute h-[28.329px] left-0 top-0 w-[113.747px]"><svg
+                    class="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none"
+                    viewBox="0 0 113.747 28.3291">
+                    <path
+                      d="M92.1318 0.5L112.839 14.5811L92.1396 27.8291H1.55371L19.416 15L19.9648 14.6055L19.4277 14.1963L1.47949 0.5H92.1318Z"
+                      fill="var(--fill-0, #E8E8E6)" id="Rectangle 3" stroke="var(--stroke-0, #AFB4B7)"></path>
+                  </svg></div>
+                <div class="absolute bg-transparent h-[20.134px] left-[21.5px] top-[4.1px] w-[63.148px]"></div>
+                <div
+                  class="-translate-x-1/2 -translate-y-1/2 [word-break:break-word] absolute flex flex-col font-[&#x27;Open_Sans:SemiBold&#x27;,sans-serif] font-semibold justify-center leading-[0] left-[calc(50%-3.8px)] text-[#0f1117] text-[10.078px] text-center top-1/2 tracking-[0.2559px] whitespace-nowrap"
+                  style="font-variation-settings:&quot;wdth&quot; 100">
+                  <p class="leading-[14.398px]">3</p>
+                </div>
+              </div>
+              <div class="h-[28.329px] relative shrink-0 w-[113.747px]">
+                <div class="absolute h-[28.329px] left-0 top-0 w-[113.747px]"><svg
+                    class="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none"
+                    viewBox="0 0 113.747 28.3291">
+                    <path
+                      d="M92.1318 0.5L112.839 14.5811L92.1396 27.8291H1.55371L19.416 15L19.9648 14.6055L19.4277 14.1963L1.47949 0.5H92.1318Z"
+                      fill="var(--fill-0, #E8E8E6)" id="Rectangle 3" stroke="var(--stroke-0, #AFB4B7)"></path>
+                  </svg></div>
+                <div class="absolute bg-transparent h-[20.134px] left-[21.5px] top-[4.1px] w-[63.148px]"></div>
+                <div
+                  class="-translate-x-1/2 -translate-y-1/2 [word-break:break-word] absolute flex flex-col font-[&#x27;Open_Sans:SemiBold&#x27;,sans-serif] font-semibold justify-center leading-[0] left-[calc(50%-3.8px)] text-[#0f1117] text-[10.078px] text-center top-1/2 tracking-[0.2559px] whitespace-nowrap"
+                  style="font-variation-settings:&quot;wdth&quot; 100">
+                  <p class="leading-[14.398px]">4</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="-translate-x-1/2 absolute flex h-[23.3px] items-center justify-center left-1/2 top-[22.49px] w-[151.901px]">
+            <div class="flex-none rotate-90">
+              <div class="h-[151.901px] relative w-[23.3px]">
+                <div class="absolute flex h-[151.901px] items-center justify-center left-0 top-0 w-[23.3px]">
+                  <div class="-rotate-90 flex-none">
+                    <div class="bg-transparent h-[23.3px] relative w-[151.901px]"></div>
+                  </div>
+                </div>
+                <div
+                  class="-translate-x-1/2 -translate-y-1/2 absolute flex h-[17px] items-center justify-center left-[calc(50%-0.25px)] top-[calc(50%+0.82px)] w-[21px]">
+                  <div class="-rotate-90 flex-none">
+                    <div
+                      class="[word-break:break-word] flex flex-col font-[&#x27;Open_Sans:SemiBold&#x27;,sans-serif] font-semibold justify-center leading-[0] relative text-[#0f1117] text-[14.442px] text-center tracking-[0.3667px] whitespace-nowrap"
+                      style="font-variation-settings:&quot;wdth&quot; 100">
+                      <p class="leading-[20.632px]">TE</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="absolute flex h-[82.646px] items-center justify-center left-[578.63px] top-[33.49px] w-[0.256px]">
+            <div class="flex-none rotate-[89.82deg]">
+              <div class="h-0 relative w-[82.647px]">
+                <div class="absolute inset-[-1px_0_0_0]"><svg class="block size-full" fill="none"
+                    preserveAspectRatio="none" viewBox="0 0 82.6469 1">
+                    <line id="Line 2" stroke="var(--stroke-0, black)" stroke-dasharray="6 6" x2="82.6469" y1="0.5"
+                      y2="0.5"></line>
+                  </svg></div>
+              </div>
+            </div>
+          </div>
+          <div class="absolute flex h-[98.608px] items-center justify-center left-[578.05px] top-[157.81px] w-0">
+            <div class="flex-none rotate-90">
+              <div class="h-0 relative w-[98.608px]">
+                <div class="absolute inset-[-1px_0_0_0]"><svg class="block size-full" fill="none"
+                    preserveAspectRatio="none" viewBox="0 0 98.6081 1">
+                    <line id="Line 3" stroke="var(--stroke-0, black)" stroke-dasharray="6 6" x2="98.6081" y1="0.5"
+                      y2="0.5"></line>
+                  </svg></div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="absolute flex h-[95.294px] items-center justify-center left-[765.29px] top-[322.32px] w-[25.349px]">
+            <div class="flex-none rotate-[104.9deg]">
+              <div class="h-0 relative w-[98.608px]">
+                <div class="absolute inset-[-1px_0_0_0]"><svg class="block size-full" fill="none"
+                    preserveAspectRatio="none" viewBox="0 0 98.6081 1">
+                    <line id="Line 6" stroke="var(--stroke-0, black)" stroke-dasharray="6 6" x2="98.6081" y1="0.5"
+                      y2="0.5"></line>
+                  </svg></div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="absolute flex h-[121.62px] items-center justify-center left-[1095.02px] top-[286.07px] w-[2.563px]">
+            <div class="flex-none rotate-[91.21deg]">
+              <div class="h-0 relative w-[121.647px]">
+                <div class="absolute inset-[-1px_0_0_0]"><svg class="block size-full" fill="none"
+                    preserveAspectRatio="none" viewBox="0 0 121.647 1">
+                    <line id="Line 9" stroke="var(--stroke-0, black)" stroke-dasharray="6 6" x2="121.647" y1="0.5"
+                      y2="0.5"></line>
+                  </svg></div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="absolute flex h-[121.62px] items-center justify-center left-[966.82px] top-[281.68px] w-[2.563px]">
+            <div class="flex-none rotate-[91.21deg]">
+              <div class="h-0 relative w-[121.647px]">
+                <div class="absolute inset-[-1px_0_0_0]"><svg class="block size-full" fill="none"
+                    preserveAspectRatio="none" viewBox="0 0 121.647 1">
+                    <line id="Line 9" stroke="var(--stroke-0, black)" stroke-dasharray="6 6" x2="121.647" y1="0.5"
+                      y2="0.5"></line>
+                  </svg></div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="absolute flex h-[0.197px] items-center justify-center left-[768.12px] top-[438.21px] w-[33.516px]">
+            <div class="flex-none rotate-[-179.66deg]">
+              <div class="h-0 relative w-[33.517px]">
+                <div class="absolute inset-[-1px_0_0_0]"><svg class="block size-full" fill="none"
+                    preserveAspectRatio="none" viewBox="0 0 33.5166 1">
+                    <line id="Line 8" stroke="var(--stroke-0, black)" stroke-dasharray="6 6" x2="33.5166" y1="0.5"
+                      y2="0.5"></line>
+                  </svg></div>
+              </div>
+            </div>
+          </div>
+          <div class="absolute flex h-[33.757px] items-center justify-center left-[578px] top-[333.84px] w-0">
+            <div class="flex-none rotate-90">
+              <div class="h-0 relative w-[33.757px]">
+                <div class="absolute inset-[-1px_0_0_0]"><svg class="block size-full" fill="none"
+                    preserveAspectRatio="none" viewBox="0 0 33.7575 1">
+                    <line id="Line 4" stroke="var(--stroke-0, black)" stroke-dasharray="6 6" x2="33.7575" y1="0.5"
+                      y2="0.5"></line>
+                  </svg></div>
+              </div>
+            </div>
+          </div>
+          <div class="absolute flex h-[33.757px] items-center justify-center left-[578px] top-[397.84px] w-0">
+            <div class="flex-none rotate-90">
+              <div class="h-0 relative w-[33.757px]">
+                <div class="absolute inset-[-1px_0_0_0]"><svg class="block size-full" fill="none"
+                    preserveAspectRatio="none" viewBox="0 0 33.7575 1">
+                    <line id="Line 4" stroke="var(--stroke-0, black)" stroke-dasharray="6 6" x2="33.7575" y1="0.5"
+                      y2="0.5"></line>
+                  </svg></div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="absolute flex h-[95.294px] items-center justify-center left-[787.04px] top-[240.46px] w-[25.349px]">
+            <div class="flex-none rotate-[104.9deg]">
+              <div class="h-0 relative w-[98.608px]">
+                <div class="absolute inset-[-1px_0_0_0]"><svg class="block size-full" fill="none"
+                    preserveAspectRatio="none" viewBox="0 0 98.6081 1">
+                    <line id="Line 6" stroke="var(--stroke-0, black)" stroke-dasharray="6 6" x2="98.6081" y1="0.5"
+                      y2="0.5"></line>
+                  </svg></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="absolute h-[28.329px] left-[1067.95px] top-[445.91px] w-[195.055px]"><svg
+            class="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none"
+            viewBox="0 0 195.055 28.3291">
+            <path
+              d="M174.419 0.5L194.176 14.5811L174.428 27.8291H1.49414L18.5293 14.9932L19.0439 14.6055L18.541 14.2031L1.4248 0.5H174.419Z"
+              fill="var(--fill-0, #CAD4DD)" id="Rectangle 3" stroke="var(--stroke-0, #AEBAC6)"></path>
+          </svg></div>
+        <div
+          class="absolute bg-transparent content-stretch flex h-[20px] items-center justify-center left-[1094px] px-[56px] py-[3px] top-[450px] w-[145px]">
+          <div
+            class="[word-break:break-word] flex flex-col font-[&#x27;Open_Sans:SemiBold&#x27;,sans-serif] font-semibold justify-center leading-[0] relative shrink-0 text-[#0f1117] text-[10.078px] text-center tracking-[0.2559px] whitespace-nowrap"
+            style="font-variation-settings:&quot;wdth&quot; 100">
+            <p class="leading-[14.398px]">D</p>
+          </div>
+        </div>
+        <div class="absolute h-[28.329px] left-[892.3px] top-[445.84px] w-[185.983px]">
+          <div class="absolute h-[28.329px] left-0 top-0 w-[188.817px]"><svg class="absolute block inset-0 size-full"
+              fill="none" preserveAspectRatio="none" viewBox="0 0 188.817 28.3291">
+              <path
+                d="M171.221 0.5L188.023 13.9756L171.217 27.8291H1.30371L15.6436 14.9307L16.0459 14.5693L15.6543 14.1973L1.25098 0.5H171.221Z"
+                fill="var(--fill-0, #CAD4DD)" id="Rectangle 3" stroke="var(--stroke-0, #AEBAC6)"></path>
+            </svg></div>
+          <div
+            class="absolute bg-transparent content-stretch flex h-[20px] items-center justify-center left-[22.93px] px-[56px] py-[3px] top-[4.09px] w-[144px]">
+            <div
+              class="[word-break:break-word] flex flex-col font-[&#x27;Open_Sans:SemiBold&#x27;,sans-serif] font-semibold justify-center leading-[0] relative shrink-0 text-[#0f1117] text-[10.078px] text-center tracking-[0.2559px] whitespace-nowrap"
+              style="font-variation-settings:&quot;wdth&quot; 100">
+              <p class="leading-[14.398px]">C</p>
+            </div>
+          </div>
+        </div>
+        <div class="absolute h-[28.329px] left-[714.78px] top-[445.91px] w-[185.983px]">
+          <div class="absolute h-[28.329px] left-0 top-0 w-[185.983px]"><svg class="absolute block inset-0 size-full"
+              fill="none" preserveAspectRatio="none" viewBox="0 0 185.983 28.3291">
+              <path
+                d="M171.188 0.5L185.265 14.583L171.197 27.8291H1.30371L15.6436 14.9307L16.0459 14.5693L15.6543 14.1973L1.25098 0.5H171.188Z"
+                fill="var(--fill-0, #CAD4DD)" id="Rectangle 3" stroke="var(--stroke-0, #AEBAC6)"></path>
+            </svg></div>
+          <div
+            class="absolute bg-transparent content-stretch flex h-[20px] items-center justify-center left-[21.45px] px-[56px] py-[3px] top-[4.02px] w-[145px]">
+            <div
+              class="[word-break:break-word] flex flex-col font-[&#x27;Open_Sans:SemiBold&#x27;,sans-serif] font-semibold justify-center leading-[0] relative shrink-0 text-[#0f1117] text-[10.078px] text-center tracking-[0.2559px] whitespace-nowrap"
+              style="font-variation-settings:&quot;wdth&quot; 100">
+              <p class="leading-[14.398px]">B</p>
+            </div>
+          </div>
+        </div>
+        <div class="absolute h-[28px] left-[515px] top-[446px] w-[206px]">
+          <div class="absolute h-[28.329px] left-0 top-0 w-[185.983px]"><svg class="absolute block inset-0 size-full"
+              fill="none" preserveAspectRatio="none" viewBox="0 0 185.983 28.3291">
+              <path d="M171.188 0.5L185.265 14.583L171.197 27.8291H0.5V0.5H171.188Z" fill="var(--fill-0, #CAD4DD)"
+                id="Rectangle 3" stroke="var(--stroke-0, #AEBAC6)"></path>
+            </svg></div>
+          <div
+            class="absolute bg-transparent content-stretch flex h-[20px] items-center justify-center left-[7px] px-[56px] py-[3px] top-[4px] w-[159px]">
+            <div
+              class="[word-break:break-word] flex flex-col font-[&#x27;Open_Sans:SemiBold&#x27;,sans-serif] font-semibold justify-center leading-[0] relative shrink-0 text-[#0f1117] text-[10.078px] text-center tracking-[0.2559px] whitespace-nowrap"
+              style="font-variation-settings:&quot;wdth&quot; 100">
+              <p class="leading-[14.398px]">A</p>
+            </div>
+          </div>
+        </div>
+        <div class="absolute h-[28.329px] left-[1263px] top-[445.98px] w-[282.57px]">
+          <div class="absolute h-[28.329px] left-[-9.67px] top-[-0.07px] w-[229.972px]"><svg
+              class="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none"
+              viewBox="0 0 229.972 28.3291">
+              <path
+                d="M205.745 0.5L228.985 14.3906L205.749 27.8291H1.66602L20.9492 15.1094L21.5586 14.707L20.9629 14.2842L1.56641 0.5H205.745Z"
+                fill="var(--fill-0, #CAD4DD)" id="Rectangle 3" stroke="var(--stroke-0, #AEBAC6)"></path>
+            </svg></div>
+          <div class="absolute bg-transparent h-[20.134px] left-[15.03px] top-[4.03px] w-[179.547px]"></div>
+          <div
+            class="-translate-x-1/2 -translate-y-1/2 [word-break:break-word] absolute flex flex-col font-[&#x27;Open_Sans:SemiBold&#x27;,sans-serif] font-semibold justify-center leading-[0] left-[calc(50%-47.42px)] text-[#0f1117] text-[10.078px] text-center top-[calc(50%-0.07px)] tracking-[0.2559px] whitespace-nowrap"
+            style="font-variation-settings:&quot;wdth&quot; 100">
+            <p class="leading-[14.398px]">E</p>
+          </div>
+        </div>
+        <div class="absolute flex items-center justify-center left-[1445.17px] size-[68.985px] top-[309.76px]">
+          <div class="flex-none rotate-90">
+            <div class="relative size-[68.985px]">
+              <div class="absolute bottom-1/4 left-[6.7%] right-[6.7%] top-0"><svg class="block size-full" fill="none"
+                  preserveAspectRatio="none" viewBox="0 0 59.7426 51.7386">
+                  <path d="M29.8713 0L59.7426 51.7386H0L29.8713 0Z" fill="var(--fill-0, #5F82A0)" id="Polygon 2"></path>
+                </svg></div>
+            </div>
+          </div>
+        </div>
+        <div class="absolute flex items-center justify-center left-[1479.66px] size-[68.985px] top-[594.51px]">
+          <div class="flex-none rotate-90">
+            <div class="relative size-[68.985px]">
+              <div class="absolute bottom-1/4 left-[6.7%] right-[6.7%] top-0"><svg class="block size-full" fill="none"
+                  preserveAspectRatio="none" viewBox="0 0 59.7426 51.7386">
+                  <path d="M29.8713 0L59.7426 51.7386H0L29.8713 0Z" fill="var(--fill-0, #5F82A0)" id="Polygon 2"></path>
+                </svg></div>
+            </div>
+          </div>
+        </div>
+        <div class="absolute left-[181.34px] size-[44.079px] top-[193px] cursor-pointer">
+          <div class="absolute flex items-center justify-center left-0 size-[44.079px] top-0">
+            <div class="flex-none rotate-[-43.47deg]">
+              <div class="bg-[#02b24f] relative size-[31.18px]"></div>
+            </div>
+          </div>
+          <div
+            class="-translate-x-1/2 -translate-y-1/2 [word-break:break-word] absolute flex flex-col font-[&#x27;Open_Sans:SemiBold&#x27;,sans-serif] font-semibold justify-center leading-[0] left-1/2 text-[#0f1117] text-[10.078px] text-center top-1/2 tracking-[0.2559px] whitespace-nowrap"
+            style="font-variation-settings:&quot;wdth&quot; 100">
+            <p class="leading-[14.398px]">T1</p>
+          </div>
+        </div>
+        <div class="absolute left-[259.42px] size-[44.079px] top-[193px] cursor-pointer">
+          <div class="absolute flex items-center justify-center left-0 size-[44.079px] top-0">
+            <div class="flex-none rotate-[-43.47deg]">
+              <div class="bg-[#02b24f] relative size-[31.18px]"></div>
+            </div>
+          </div>
+          <div
+            class="-translate-x-1/2 -translate-y-1/2 [word-break:break-word] absolute flex flex-col font-[&#x27;Open_Sans:SemiBold&#x27;,sans-serif] font-semibold justify-center leading-[0] left-1/2 text-[#0f1117] text-[10.078px] text-center top-1/2 tracking-[0.2559px] whitespace-nowrap"
+            style="font-variation-settings:&quot;wdth&quot; 100">
+            <p class="leading-[14.398px]">T2</p>
+          </div>
+        </div>
+        <div class="absolute left-[337.5px] size-[44.079px] top-[193px] cursor-pointer">
+          <div class="absolute flex items-center justify-center left-0 size-[44.079px] top-0">
+            <div class="flex-none rotate-[-43.47deg]">
+              <div class="bg-[#02b24f] relative size-[31.18px]"></div>
+            </div>
+          </div>
+          <div
+            class="-translate-x-1/2 -translate-y-1/2 [word-break:break-word] absolute flex flex-col font-[&#x27;Open_Sans:SemiBold&#x27;,sans-serif] font-semibold justify-center leading-[0] left-1/2 text-[#0f1117] text-[10.078px] text-center top-1/2 tracking-[0.2559px] whitespace-nowrap"
+            style="font-variation-settings:&quot;wdth&quot; 100">
+            <p class="leading-[14.398px]">T3</p>
+          </div>
+        </div>
+        <div class="absolute left-[415.57px] size-[44.079px] top-[193px] cursor-pointer">
+          <div class="absolute flex items-center justify-center left-0 size-[44.079px] top-0">
+            <div class="flex-none rotate-[-43.47deg]">
+              <div class="bg-[#02b24f] relative size-[31.18px]"></div>
+            </div>
+          </div>
+          <div
+            class="-translate-x-1/2 -translate-y-1/2 [word-break:break-word] absolute flex flex-col font-[&#x27;Open_Sans:SemiBold&#x27;,sans-serif] font-semibold justify-center leading-[0] left-1/2 text-[#0f1117] text-[10.078px] text-center top-1/2 tracking-[0.2559px] whitespace-nowrap"
+            style="font-variation-settings:&quot;wdth&quot; 100">
+            <p class="leading-[14.398px]">T4</p>
+          </div>
+        </div>
+        <div class="absolute left-[494.58px] size-[44.079px] top-[185.5px] cursor-pointer">
+          <div class="absolute flex items-center justify-center left-0 size-[44.079px] top-0">
+            <div class="flex-none rotate-[-43.47deg]">
+              <div class="bg-[#02b24f] relative size-[31.18px]"></div>
+            </div>
+          </div>
+          <div
+            class="-translate-x-1/2 -translate-y-1/2 [word-break:break-word] absolute flex flex-col font-[&#x27;Open_Sans:SemiBold&#x27;,sans-serif] font-semibold justify-center leading-[0] left-1/2 text-[#0f1117] text-[10.078px] text-center top-1/2 tracking-[0.2559px] whitespace-nowrap"
+            style="font-variation-settings:&quot;wdth&quot; 100">
+            <p class="leading-[14.398px]">T5</p>
+          </div>
+          <div class="absolute bg-transparent h-[18px] left-[21.42px] top-[73.5px] w-[91px]">
+            <div class="flex flex-row items-center justify-center size-full">
+              <div class="content-stretch flex items-center justify-center p-[10px] relative size-full">
+                <div
+                  class="[word-break:break-word] flex flex-col font-[&#x27;Open_Sans:SemiBold&#x27;,sans-serif] font-semibold justify-center leading-[0] relative shrink-0 text-[#0f1117] text-[14.442px] text-center tracking-[0.3667px] whitespace-nowrap"
+                  style="font-variation-settings:&quot;wdth&quot; 100">
+                  <p class="leading-[20.632px]">Start</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="absolute bg-transparent h-[18px] left-[452.15px] top-[75.5px] w-[108px]">
+            <div class="flex flex-row items-center justify-center size-full">
+              <div class="content-stretch flex items-center justify-center p-[10px] relative size-full">
+                <div
+                  class="[word-break:break-word] flex flex-col font-[&#x27;Open_Sans:SemiBold&#x27;,sans-serif] font-semibold justify-center leading-[0] relative shrink-0 text-[#0f1117] text-[14.442px] text-center tracking-[0.3667px] whitespace-nowrap"
+                  style="font-variation-settings:&quot;wdth&quot; 100">
+                  <p class="leading-[20.632px]">XXXX</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="absolute bg-transparent content-stretch flex h-[42px] items-center justify-center left-[497.42px] p-[10px] top-[315.5px] w-[108px]">
+            <div
+              class="[word-break:break-word] flex flex-col font-[&#x27;Open_Sans:SemiBold&#x27;,sans-serif] font-semibold justify-center leading-[0] relative shrink-0 text-[#0f1117] text-[14.442px] text-center tracking-[0.3667px] whitespace-nowrap"
+              style="font-variation-settings:&quot;wdth&quot; 100">
+              <p class="leading-[20.632px] mb-0">XXXX</p>
+              <p class="leading-[20.632px]">xxxxx</p>
+            </div>
+          </div>
+          <div
+            class="absolute bg-transparent content-stretch flex h-[42px] items-center justify-center left-[680.42px] p-[10px] top-[315.5px] w-[73px]">
+            <div
+              class="[word-break:break-word] flex flex-col font-[&#x27;Open_Sans:SemiBold&#x27;,sans-serif] font-semibold justify-center leading-[0] relative shrink-0 text-[#0f1117] text-[14.442px] text-center tracking-[0.3667px] whitespace-nowrap"
+              style="font-variation-settings:&quot;wdth&quot; 100">
+              <p class="leading-[20.632px] mb-0">XXXX</p>
+              <p class="leading-[20.632px]">xxxxx</p>
+            </div>
+          </div>
+          <div
+            class="absolute bg-transparent content-stretch flex h-[42px] items-center justify-center left-[810.42px] p-[10px] top-[315.5px] w-[73px]">
+            <div
+              class="[word-break:break-word] flex flex-col font-[&#x27;Open_Sans:SemiBold&#x27;,sans-serif] font-semibold justify-center leading-[0] relative shrink-0 text-[#0f1117] text-[14.442px] text-center tracking-[0.3667px] whitespace-nowrap"
+              style="font-variation-settings:&quot;wdth&quot; 100">
+              <p class="leading-[20.632px] mb-0">XXXX</p>
+              <p class="leading-[20.632px]">xxxxx</p>
+            </div>
+          </div>
+          <div class="absolute bg-transparent h-[18px] left-[867.92px] top-[77px] w-[108px]">
+            <div class="flex flex-row items-center justify-center size-full">
+              <div class="content-stretch flex items-center justify-center p-[10px] relative size-full">
+                <div
+                  class="[word-break:break-word] flex flex-col font-[&#x27;Open_Sans:SemiBold&#x27;,sans-serif] font-semibold justify-center leading-[0] relative shrink-0 text-[#0f1117] text-[14.442px] text-center tracking-[0.3667px] whitespace-nowrap"
+                  style="font-variation-settings:&quot;wdth&quot; 100">
+                  <p class="leading-[20.632px]">XXXXX</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="absolute bg-transparent h-[18px] left-[1100.21px] top-[262.5px] w-[108px]">
+          <div class="flex flex-row items-center justify-center size-full">
+            <div class="content-stretch flex items-center justify-center p-[10px] relative size-full">
+              <div
+                class="[word-break:break-word] flex flex-col font-[&#x27;Open_Sans:SemiBold&#x27;,sans-serif] font-semibold justify-center leading-[0] relative shrink-0 text-[#0f1117] text-[14.442px] text-center tracking-[0.3667px] whitespace-nowrap"
+                style="font-variation-settings:&quot;wdth&quot; 100">
+                <p class="leading-[20.632px]">XXXXX</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="absolute bg-transparent h-[18px] left-[1224.42px] top-[261px] w-[108px]">
+          <div class="flex flex-row items-center justify-center size-full">
+            <div class="content-stretch flex items-center justify-center p-[10px] relative size-full">
+              <div
+                class="[word-break:break-word] flex flex-col font-[&#x27;Open_Sans:SemiBold&#x27;,sans-serif] font-semibold justify-center leading-[0] relative shrink-0 text-[#0f1117] text-[14.442px] text-center tracking-[0.3667px] whitespace-nowrap"
+                style="font-variation-settings:&quot;wdth&quot; 100">
+                <p class="leading-[20.632px]">XXXXX</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="absolute left-[738.17px] size-[44.079px] top-[189px] cursor-pointer">
+          <div class="absolute flex items-center justify-center left-0 size-[44.079px] top-0">
+            <div class="flex-none rotate-[-43.47deg]">
+              <div class="bg-[#02b24f] relative size-[31.18px]"></div>
+            </div>
+          </div>
+          <div
+            class="-translate-x-1/2 -translate-y-1/2 [word-break:break-word] absolute flex flex-col font-[&#x27;Open_Sans:SemiBold&#x27;,sans-serif] font-semibold justify-center leading-[0] left-1/2 text-[#0f1117] text-[10.078px] text-center top-1/2 tracking-[0.2559px] whitespace-nowrap"
+            style="font-variation-settings:&quot;wdth&quot; 100">
+            <p class="leading-[14.398px]">T6</p>
+          </div>
+        </div>
+        <div class="absolute left-[493.8px] size-[44.079px] top-[493.71px] cursor-pointer">
+          <div class="absolute flex items-center justify-center left-0 size-[44.079px] top-0">
+            <div class="flex-none rotate-[-43.47deg]">
+              <div class="bg-[#02b24f] relative size-[31.18px]"></div>
+            </div>
+          </div>
+          <div
+            class="-translate-x-1/2 -translate-y-1/2 [word-break:break-word] absolute flex flex-col font-[&#x27;Open_Sans:SemiBold&#x27;,sans-serif] font-semibold justify-center leading-[0] left-1/2 text-[#0f1117] text-[10.078px] text-center top-1/2 tracking-[0.2559px] whitespace-nowrap"
+            style="font-variation-settings:&quot;wdth&quot; 100">
+            <p class="leading-[14.398px]">G1</p>
+          </div>
+        </div>
+        <div class="absolute left-[646px] size-[44.079px] top-[493.71px] cursor-pointer">
+          <div class="absolute flex items-center justify-center left-0 size-[44.079px] top-0">
+            <div class="flex-none rotate-[-43.47deg]">
+              <div class="bg-[#02b24f] relative size-[31.18px]"></div>
+            </div>
+          </div>
+          <div
+            class="-translate-x-1/2 -translate-y-1/2 [word-break:break-word] absolute flex flex-col font-[&#x27;Open_Sans:SemiBold&#x27;,sans-serif] font-semibold justify-center leading-[0] left-1/2 text-[#0f1117] text-[10.078px] text-center top-1/2 tracking-[0.2559px] whitespace-nowrap"
+            style="font-variation-settings:&quot;wdth&quot; 100">
+            <p class="leading-[14.398px]">G2</p>
+          </div>
+        </div>
+        <div class="absolute left-[737.3px] size-[44.079px] top-[493.71px] cursor-pointer">
+          <div class="absolute flex items-center justify-center left-0 size-[44.079px] top-0">
+            <div class="flex-none rotate-[-43.47deg]">
+              <div class="bg-[#02b24f] relative size-[31.18px]"></div>
+            </div>
+          </div>
+          <div
+            class="-translate-x-1/2 -translate-y-1/2 [word-break:break-word] absolute flex flex-col font-[&#x27;Open_Sans:SemiBold&#x27;,sans-serif] font-semibold justify-center leading-[0] left-1/2 text-[#0f1117] text-[10.078px] text-center top-1/2 tracking-[0.2559px] whitespace-nowrap"
+            style="font-variation-settings:&quot;wdth&quot; 100">
+            <p class="leading-[14.398px]">G3</p>
+          </div>
+        </div>
+        <div class="absolute left-[905.58px] size-[44.079px] top-[493.71px] cursor-pointer">
+          <div class="absolute flex items-center justify-center left-0 size-[44.079px] top-0">
+            <div class="flex-none rotate-[-43.47deg]">
+              <div class="bg-[#02b24f] relative size-[31.18px]"></div>
+            </div>
+          </div>
+          <div
+            class="-translate-x-1/2 -translate-y-1/2 [word-break:break-word] absolute flex flex-col font-[&#x27;Open_Sans:SemiBold&#x27;,sans-serif] font-semibold justify-center leading-[0] left-1/2 text-[#0f1117] text-[10.078px] text-center top-1/2 tracking-[0.2559px] whitespace-nowrap"
+            style="font-variation-settings:&quot;wdth&quot; 100">
+            <p class="leading-[14.398px]">G4</p>
+          </div>
+        </div>
+        <div class="absolute flex items-center justify-center left-[936.54px] size-[18.994px] top-[488.55px]">
+          <div class="flex-none rotate-[-159.78deg]">
+            <div class="relative size-[14.793px]">
+              <div class="absolute bottom-1/4 left-[6.7%] right-[6.7%] top-0"><svg class="block size-full" fill="none"
+                  preserveAspectRatio="none" viewBox="0 0 12.8111 11.0947">
+                  <path d="M6.40554 0L12.8111 11.0947H0L6.40554 0Z" fill="var(--fill-0, #161616)" id="Polygon 8"></path>
+                </svg></div>
+            </div>
+          </div>
+        </div>
+        <div class="absolute flex items-center justify-center left-[1270.23px] size-[14.793px] top-[482.66px]">
+          <div class="flex-none rotate-180">
+            <div class="relative size-[14.793px]">
+              <div class="absolute bottom-1/4 left-[6.7%] right-[6.7%] top-0"><svg class="block size-full" fill="none"
+                  preserveAspectRatio="none" viewBox="0 0 12.8111 11.0947">
+                  <path d="M6.40554 0L12.8111 11.0947H0L6.40554 0Z" fill="var(--fill-0, #161616)" id="Polygon 6"></path>
+                </svg></div>
+            </div>
+          </div>
+        </div>
+        <div class="absolute flex items-center justify-center left-[1142.04px] size-[14.793px] top-[478.27px]">
+          <div class="flex-none rotate-180">
+            <div class="relative size-[14.793px]">
+              <div class="absolute bottom-1/4 left-[6.7%] right-[6.7%] top-0"><svg class="block size-full" fill="none"
+                  preserveAspectRatio="none" viewBox="0 0 12.8111 11.0947">
+                  <path d="M6.40554 0L12.8111 11.0947H0L6.40554 0Z" fill="var(--fill-0, #161616)" id="Polygon 6"></path>
+                </svg></div>
+            </div>
+          </div>
+        </div>
+        <div class="absolute left-[1127px] size-[44.079px] top-[493.71px] cursor-pointer">
+          <div class="absolute flex items-center justify-center left-0 size-[44.079px] top-0">
+            <div class="flex-none rotate-[-43.47deg]">
+              <div class="bg-[#02b24f] relative size-[31.18px]"></div>
+            </div>
+          </div>
+          <div
+            class="-translate-x-1/2 -translate-y-1/2 [word-break:break-word] absolute flex flex-col font-[&#x27;Open_Sans:SemiBold&#x27;,sans-serif] font-semibold justify-center leading-[0] left-1/2 text-[#0f1117] text-[10.078px] text-center top-1/2 tracking-[0.2559px] whitespace-nowrap"
+            style="font-variation-settings:&quot;wdth&quot; 100">
+            <p class="leading-[14.398px]">G5</p>
+          </div>
+        </div>
+        <div class="absolute left-[1255.99px] size-[44.079px] top-[493.71px] cursor-pointer">
+          <div class="absolute flex items-center justify-center left-0 size-[44.079px] top-0">
+            <div class="flex-none rotate-[-43.47deg]">
+              <div class="bg-[#02b24f] relative size-[31.18px]"></div>
+            </div>
+          </div>
+          <div
+            class="-translate-x-1/2 -translate-y-1/2 [word-break:break-word] absolute flex flex-col font-[&#x27;Open_Sans:SemiBold&#x27;,sans-serif] font-semibold justify-center leading-[0] left-1/2 text-[#0f1117] text-[10.078px] text-center top-1/2 tracking-[0.2559px] whitespace-nowrap"
+            style="font-variation-settings:&quot;wdth&quot; 100">
+            <p class="leading-[14.398px]">G6</p>
+          </div>
+        </div>
+        <div class="absolute left-[1392.46px] size-[44.079px] top-[493.71px] cursor-pointer">
+          <div class="absolute flex items-center justify-center left-0 size-[44.079px] top-0">
+            <div class="flex-none rotate-[-43.47deg]">
+              <div class="bg-[#02b24f] relative size-[31.18px]"></div>
+            </div>
+          </div>
+          <div
+            class="-translate-x-1/2 -translate-y-1/2 [word-break:break-word] absolute flex flex-col font-[&#x27;Open_Sans:SemiBold&#x27;,sans-serif] font-semibold justify-center leading-[0] left-1/2 text-[#0f1117] text-[10.078px] text-center top-1/2 tracking-[0.2559px] whitespace-nowrap"
+            style="font-variation-settings:&quot;wdth&quot; 100">
+            <p class="leading-[14.398px]">G7</p>
+          </div>
+        </div>
+        <div class="absolute left-[1457.62px] size-[44.079px] top-[493.71px] cursor-pointer">
+          <div class="absolute flex items-center justify-center left-0 size-[44.079px] top-0">
+            <div class="flex-none rotate-[-43.47deg]">
+              <div class="bg-[#02b24f] relative size-[31.18px]"></div>
+            </div>
+          </div>
+          <div
+            class="-translate-x-1/2 -translate-y-1/2 [word-break:break-word] absolute flex flex-col font-[&#x27;Open_Sans:SemiBold&#x27;,sans-serif] font-semibold justify-center leading-[0] left-1/2 text-[#0f1117] text-[10.078px] text-center top-1/2 tracking-[0.2559px] whitespace-nowrap"
+            style="font-variation-settings:&quot;wdth&quot; 100">
+            <p class="leading-[14.398px]">G8</p>
+          </div>
+        </div>
+        <div class="absolute left-[110px] w-[62.887px]" style="top: 145.49px; height: 181.51px;">
+          <div class="absolute bg-[#a6a6a6] left-[18.61px] w-[25.67px]" style="top: 46.32px; height: 135.19px;"></div>
+          <div class="absolute left-0 size-[62.887px] top-0">
+            <div class="absolute bottom-1/4 left-[6.7%] right-[6.7%] top-0" style="bottom: 25%;"><svg class="block size-full" fill="none"
+                preserveAspectRatio="none" viewBox="0 0 54.4615 47.165">
+                <path d="M27.2307 0L54.4615 47.165H0L27.2307 0Z" fill="var(--fill-0, #A6A6A6)" id="Polygon 1"></path>
+              </svg></div>
+          </div>
+          <div class="absolute flex h-[106px] items-center justify-center left-[23.44px] top-[54.49px] w-[16px]">
+            <div class="-rotate-90 flex-none">
+              <div class="h-[16px] relative w-[106px]">
+                <div class="absolute bg-transparent h-[16.259px] left-0 top-0 w-[106px]"></div>
+                <div
+                  class="-translate-x-1/2 -translate-y-1/2 [word-break:break-word] absolute flex flex-col font-[&#x27;Open_Sans:SemiBold&#x27;,sans-serif] font-semibold justify-center leading-[0] left-[calc(50%-0.34px)] text-[#0f1117] text-[10.078px] text-center top-[calc(50%+0.43px)] tracking-[0.2559px] whitespace-nowrap"
+                  style="font-variation-settings:&quot;wdth&quot; 100">
+                  <p class="leading-[14.398px]">A</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="absolute bg-[#5f82a0] content-stretch flex h-[36px] items-center justify-center left-[77px] pb-[8.5px] pt-[7.5px] top-[327px] w-[1387px]"
+          data-name="Frame">
+          <div class="flex h-[23.3px] items-center justify-center relative shrink-0 w-[151.901px]">
+            <div class="flex-none rotate-90">
+              <div class="h-[151.901px] relative w-[23.3px]">
+                <div class="absolute flex h-[151.901px] items-center justify-center left-0 top-0 w-[23.3px]">
+                  <div class="-rotate-90 flex-none">
+                    <div class="bg-transparent h-[23.3px] relative w-[151.901px]"></div>
+                  </div>
+                </div>
+                <div
+                  class="-translate-x-1/2 -translate-y-1/2 absolute flex h-[18px] items-center justify-center left-[calc(50%-0.25px)] top-[calc(50%+1.32px)] w-[21px]">
+                  <div class="-rotate-90 flex-none">
+                    <div
+                      class="[word-break:break-word] flex flex-col font-[&#x27;Open_Sans:SemiBold&#x27;,sans-serif] font-semibold justify-center leading-[0] relative text-[#0f1117] text-[14.442px] text-center tracking-[0.3667px] whitespace-nowrap"
+                      style="font-variation-settings:&quot;wdth&quot; 100">
+                      <p class="leading-[20.632px]">PE</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="absolute flex h-[16.313px] items-center justify-center left-[683.18px] top-[29.15px] w-0">
+            <div class="flex-none rotate-90">
+              <div class="h-0 relative w-[16.313px]">
+                <div class="absolute inset-[-1px_0_0_0]"><svg class="block size-full" fill="none"
+                    preserveAspectRatio="none" viewBox="0 0 16.313 1">
+                    <line id="Line 5" stroke="var(--stroke-0, black)" stroke-dasharray="6 6" x2="16.313" y1="0.5"
+                      y2="0.5"></line>
+                  </svg></div>
+              </div>
+            </div>
+          </div>
+          <div class="absolute flex items-center justify-center left-[898.3px] size-[18.004px] top-[20.27px]">
+            <div class="flex-none rotate-[14.39deg]">
+              <div class="relative size-[14.793px]">
+                <div class="absolute bottom-1/4 left-[6.7%] right-[6.7%] top-0"><svg class="block size-full" fill="none"
+                    preserveAspectRatio="none" viewBox="0 0 12.8111 11.0947">
+                    <path d="M6.40554 0L12.8111 11.0947H0L6.40554 0Z" fill="var(--fill-0, #161616)" id="Polygon 6">
+                    </path>
+                  </svg></div>
+              </div>
+            </div>
+          </div>
+          <div class="absolute left-[1195.02px] size-[14.793px] top-[18px]">
+            <div class="absolute bottom-1/4 left-[6.7%] right-[6.7%] top-0"><svg class="block size-full" fill="none"
+                preserveAspectRatio="none" viewBox="0 0 12.8111 11.0947">
+                <path d="M6.40554 0L12.8111 11.0947H0L6.40554 0Z" fill="var(--fill-0, #161616)" id="Polygon 7"></path>
+              </svg></div>
+          </div>
+          <div class="absolute left-[1067.32px] size-[14.793px] top-[14.99px]">
+            <div class="absolute bottom-1/4 left-[6.7%] right-[6.7%] top-0"><svg class="block size-full" fill="none"
+                preserveAspectRatio="none" viewBox="0 0 12.8111 11.0947">
+                <path d="M6.40554 0L12.8111 11.0947H0L6.40554 0Z" fill="var(--fill-0, #161616)" id="Polygon 7"></path>
+              </svg></div>
+          </div>
+        </div>
+        <div
+          class="absolute bg-[#5f82a0] content-stretch flex h-[36px] items-center justify-center left-[416px] pb-[8.5px] pt-[7.5px] top-[611px] w-[1081px]"
+          data-name="Frame">
+          <div class="absolute flex h-[24px] items-center justify-center left-[11px] top-[6px] w-[343px]">
+            <div class="flex-none rotate-90">
+              <div class="h-[343px] relative w-[24px]">
+                <div class="absolute flex h-[342.999px] items-center justify-center left-0 top-0 w-[23.3px]">
+                  <div class="-rotate-90 flex-none">
+                    <div class="bg-transparent h-[23.3px] relative w-[342.999px]"></div>
+                  </div>
+                </div>
+                <div
+                  class="-translate-x-1/2 -translate-y-1/2 absolute flex h-[32px] items-center justify-center left-[calc(50%-0.6px)] top-[calc(50%+1.77px)] w-[21px]">
+                  <div class="-rotate-90 flex-none">
+                    <div
+                      class="[word-break:break-word] flex flex-col font-[&#x27;Open_Sans:SemiBold&#x27;,sans-serif] font-semibold justify-center leading-[0] relative text-[#0f1117] text-[14.442px] text-center tracking-[0.3667px] whitespace-nowrap"
+                      style="font-variation-settings:&quot;wdth&quot; 100">
+                      <p class="leading-[20.632px]">MRL</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="absolute bg-[#6d349d] content-stretch flex flex-col h-[26px] items-center justify-center left-[386px] p-[10px] rounded-[4px] top-[5px] w-[64px] cursor-pointer">
+            <div class="bg-transparent h-[20px] min-w-[44px] relative rounded-[4px] shrink-0 w-full"
+              data-name="Background+Border">
+              <div class="flex flex-row items-center justify-center min-w-[inherit] size-full">
+                <div
+                  class="content-stretch flex items-center justify-center min-w-[inherit] pb-[2.5px] pl-[12.8px] pr-[12.79px] pt-[1.5px] relative size-full">
+                  <div
+                    class="[word-break:break-word] flex flex-[1_0_0] flex-col font-[&#x27;Open_Sans:Bold&#x27;,sans-serif] font-bold justify-center leading-[0] min-w-px relative text-[12px] text-white text-center tracking-[0.5977px]"
+                    style="font-variation-settings:&quot;wdth&quot; 100">
+                    <p class="leading-[16px]">4</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="absolute bg-[#6d349d] content-stretch flex flex-col h-[26px] items-center justify-center left-[508.5px] p-[10px] rounded-[4px] top-[5px] w-[64px] cursor-pointer">
+            <div class="bg-transparent h-[20px] min-w-[44px] relative rounded-[4px] shrink-0 w-full"
+              data-name="Background+Border">
+              <div class="flex flex-row items-center justify-center min-w-[inherit] size-full">
+                <div
+                  class="content-stretch flex items-center justify-center min-w-[inherit] pb-[2.5px] pl-[12.8px] pr-[12.79px] pt-[1.5px] relative size-full">
+                  <div
+                    class="[word-break:break-word] flex flex-[1_0_0] flex-col font-[&#x27;Open_Sans:Bold&#x27;,sans-serif] font-bold justify-center leading-[0] min-w-px relative text-[12px] text-white text-center tracking-[0.5977px]"
+                    style="font-variation-settings:&quot;wdth&quot; 100">
+                    <p class="leading-[16px]">5</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="absolute bg-[#6d349d] content-stretch flex flex-col h-[26px] items-center justify-center left-[601px] p-[10px] rounded-[4px] top-[5px] w-[64px] cursor-pointer">
+            <div class="bg-transparent h-[20px] min-w-[44px] relative rounded-[4px] shrink-0 w-full"
+              data-name="Background+Border">
+              <div class="flex flex-row items-center justify-center min-w-[inherit] size-full">
+                <div
+                  class="content-stretch flex items-center justify-center min-w-[inherit] pb-[2.5px] pl-[12.8px] pr-[12.79px] pt-[1.5px] relative size-full">
+                  <div
+                    class="[word-break:break-word] flex flex-[1_0_0] flex-col font-[&#x27;Open_Sans:Bold&#x27;,sans-serif] font-bold justify-center leading-[0] min-w-px relative text-[12px] text-white text-center tracking-[0.5977px]"
+                    style="font-variation-settings:&quot;wdth&quot; 100">
+                    <p class="leading-[16px]">6</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="absolute bg-[#6d349d] content-stretch flex flex-col h-[26px] items-center justify-center left-[697px] p-[10px] rounded-[4px] top-[5px] w-[64px] cursor-pointer">
+            <div class="bg-transparent h-[20px] min-w-[44px] relative rounded-[4px] shrink-0 w-full"
+              data-name="Background+Border">
+              <div class="flex flex-row items-center justify-center min-w-[inherit] size-full">
+                <div
+                  class="content-stretch flex items-center justify-center min-w-[inherit] pb-[2.5px] pl-[12.8px] pr-[12.79px] pt-[1.5px] relative size-full">
+                  <div
+                    class="[word-break:break-word] flex flex-[1_0_0] flex-col font-[&#x27;Open_Sans:Bold&#x27;,sans-serif] font-bold justify-center leading-[0] min-w-px relative text-[12px] text-white text-center tracking-[0.5977px]"
+                    style="font-variation-settings:&quot;wdth&quot; 100">
+                    <p class="leading-[16px]">7</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="absolute bg-[#6d349d] content-stretch flex flex-col h-[26px] items-center justify-center left-[824px] p-[10px] rounded-[4px] top-[5px] w-[64px] cursor-pointer">
+            <div class="bg-transparent h-[20px] min-w-[44px] relative rounded-[4px] shrink-0 w-full"
+              data-name="Background+Border">
+              <div class="flex flex-row items-center justify-center min-w-[inherit] size-full">
+                <div
+                  class="content-stretch flex items-center justify-center min-w-[inherit] pb-[2.5px] pl-[12.8px] pr-[12.79px] pt-[1.5px] relative size-full">
+                  <div
+                    class="[word-break:break-word] flex flex-[1_0_0] flex-col font-[&#x27;Open_Sans:Bold&#x27;,sans-serif] font-bold justify-center leading-[0] min-w-px relative text-[12px] text-white text-center tracking-[0.5977px]"
+                    style="font-variation-settings:&quot;wdth&quot; 100">
+                    <p class="leading-[16px]">8</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="absolute bg-[#6d349d] content-stretch flex flex-col h-[26px] items-center justify-center left-[901px] p-[10px] rounded-[4px] top-[5px] w-[64px] cursor-pointer">
+            <div class="bg-transparent h-[20px] min-w-[44px] relative rounded-[4px] shrink-0 w-full"
+              data-name="Background+Border">
+              <div class="flex flex-row items-center justify-center min-w-[inherit] size-full">
+                <div
+                  class="content-stretch flex items-center justify-center min-w-[inherit] pb-[2.5px] pl-[12.8px] pr-[12.79px] pt-[1.5px] relative size-full">
+                  <div
+                    class="[word-break:break-word] flex flex-[1_0_0] flex-col font-[&#x27;Open_Sans:Bold&#x27;,sans-serif] font-bold justify-center leading-[0] min-w-px relative text-[12px] text-white text-center tracking-[0.5977px]"
+                    style="font-variation-settings:&quot;wdth&quot; 100">
+                    <p class="leading-[16px]">9</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="absolute bg-[#6d349d] content-stretch flex flex-col h-[26px] items-center justify-center left-[978px] p-[10px] rounded-[4px] top-[5px] w-[64px] cursor-pointer">
+            <div class="bg-transparent h-[20px] min-w-[44px] relative rounded-[4px] shrink-0 w-full"
+              data-name="Background+Border">
+              <div class="flex flex-row items-center justify-center min-w-[inherit] size-full">
+                <div
+                  class="content-stretch flex items-center justify-center min-w-[inherit] pb-[2.5px] pl-[12.8px] pr-[12.79px] pt-[1.5px] relative size-full">
+                  <div
+                    class="[word-break:break-word] flex flex-[1_0_0] flex-col font-[&#x27;Open_Sans:Bold&#x27;,sans-serif] font-bold justify-center leading-[0] min-w-px relative text-[12px] text-white text-center tracking-[0.5977px]"
+                    style="font-variation-settings:&quot;wdth&quot; 100">
+                    <p class="leading-[16px]">10</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="absolute bg-[rgba(251,251,251,0.97)] content-stretch flex flex-col h-[1024px] items-start left-[1562.56px] min-h-[900px] top-[56px] w-[360px]"
+          data-name="Background+VerticalBorder" id="drawer-panel">
+          <div aria-hidden="true" class="absolute border-[#c5c8d5] border-l border-solid inset-0 pointer-events-none">
+          </div>
+          <div class="relative shrink-0 w-full" data-name="Container">
+            <div class="content-stretch flex flex-col gap-[16px] items-start pt-[24px] px-[24px] relative size-full">
+              <div class="content-stretch flex flex-col items-start relative shrink-0 w-full" data-name="Heading 2">
+                <div
+                  class="[word-break:break-word] flex flex-col font-[&#x27;Inter:Bold&#x27;,sans-serif] font-bold justify-center leading-[0] not-italic relative shrink-0 text-[#0d0d0d] text-[18px] w-full">
+                  <p class="leading-[28px]" id="drawer-title">Process Details</p>
+                </div>
+              </div>
+              <div class="bg-[#c5c8d5] h-px relative shrink-0 w-full" data-name="Horizontal Divider"></div>
+            </div>
+          </div>
+          <div class="flex-[1_0_0] min-h-px relative w-full" data-name="Container">
+            <div class="content-stretch flex flex-col gap-[24px] items-start px-[24px] py-[20px] relative size-full">
+              <div class="content-stretch flex flex-col gap-[6px] items-start relative shrink-0 w-full"
+                data-name="Container">
+                <div class="content-stretch flex flex-col items-start relative shrink-0 w-full" data-name="Container">
+                  <div
+                    class="[word-break:break-word] flex flex-col font-[&#x27;Inter:Semi_Bold&#x27;,sans-serif] font-semibold justify-center leading-[0] not-italic relative shrink-0 text-[#1b9a53] text-[10px] tracking-[1.5px] uppercase w-full">
+                    <p class="leading-[15px]">Step Name</p>
+                  </div>
+                </div>
+                <div class="content-stretch flex flex-col items-start relative shrink-0 w-full" data-name="Container">
+                  <div
+                    class="[word-break:break-word] flex flex-col font-[&#x27;Inter:Semi_Bold&#x27;,sans-serif] font-semibold justify-center leading-[0] not-italic relative shrink-0 text-[#101316] text-[16px] w-full">
+                    <p class="leading-[24px]" id="drawer-step-name">Initial Client Onboarding</p>
+                  </div>
+                </div>
+              </div>
+              <div class="content-stretch flex flex-col gap-[6px] items-start relative shrink-0 w-full"
+                data-name="Container">
+                <div class="content-stretch flex flex-col items-start relative shrink-0 w-full" data-name="Container">
+                  <div
+                    class="[word-break:break-word] flex flex-col font-[&#x27;Inter:Semi_Bold&#x27;,sans-serif] font-semibold justify-center leading-[0] not-italic relative shrink-0 text-[#1b9a53] text-[10px] tracking-[1.5px] uppercase w-full">
+                    <p class="leading-[15px]">Objective</p>
+                  </div>
+                </div>
+                <div class="content-stretch flex flex-col items-start relative shrink-0 w-full" data-name="Container">
+                  <div
+                    class="[word-break:break-word] flex flex-col font-[&#x27;Inter:Regular&#x27;,sans-serif] font-normal justify-center leading-[0] not-italic relative shrink-0 text-[#101316] text-[14px] w-full">
+                    <p class="leading-[22px] mb-0" id="drawer-objective">Establish secure communication and data</p>
+                    <p class="leading-[22px]">protocols with new client stakeholders.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="content-stretch flex flex-col gap-[8px] items-start relative shrink-0 w-full"
+                data-name="Container">
+                <div class="content-stretch flex flex-col items-start relative shrink-0 w-full" data-name="Container">
+                  <div
+                    class="[word-break:break-word] flex flex-col font-[&#x27;Inter:Semi_Bold&#x27;,sans-serif] font-semibold justify-center leading-[0] not-italic relative shrink-0 text-[#1b9a53] text-[10px] tracking-[1.5px] uppercase w-full">
+                    <p class="leading-[15px]">Description</p>
+                  </div>
+                </div>
+                <div class="content-stretch flex flex-col items-start relative shrink-0 w-full" data-name="Container">
+                  <div
+                    class="[word-break:break-word] flex flex-col font-[&#x27;Inter:Regular&#x27;,sans-serif] font-normal justify-center leading-[0] not-italic relative shrink-0 text-[#5f82a0] text-[13px] w-full">
+                    <p class="leading-[22px] mb-0" id="drawer-description">This step encompasses the initial touchpoints
+                    </p>
+                    <p class="leading-[22px] mb-0">between the platform and client systems. The</p>
+                    <p class="leading-[22px] mb-0">onboarding agent validates API credentials, maps</p>
+                    <p class="leading-[22px] mb-0">client-side data schemas to internal canonical</p>
+                    <p class="leading-[22px] mb-0">formats, and establishes encrypted session</p>
+                    <p class="leading-[22px] mb-0">tokens. All handshakes follow OAuth 2.0 with</p>
+                    <p class="leading-[22px] mb-0">PKCE extension for maximum security</p>
+                    <p class="leading-[22px]">compliance.</p>
+                  </div>
+                </div>
+                <div class="content-stretch flex flex-col items-start pt-[4px] relative shrink-0 w-full"
+                  data-name="Margin">
+                  <div class="content-stretch flex flex-col items-start relative shrink-0 w-full" data-name="Container">
+                    <div
+                      class="[word-break:break-word] flex flex-col font-[&#x27;Inter:Regular&#x27;,sans-serif] font-normal justify-center leading-[0] not-italic relative shrink-0 text-[#5f82a0] text-[13px] w-full">
+                      <p class="leading-[22px] mb-0" id="drawer-additional-info">Upon successful completion, the
+                        workflow</p>
+                      <p class="leading-[22px] mb-0">automatically proceeds to the Validation stage</p>
+                      <p class="leading-[22px]">where data integrity checks are performed.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="content-center flex flex-wrap gap-[0px_8px] items-center relative shrink-0 w-full"
+                data-name="Container">
+                <div
+                  class="bg-[rgba(2,178,79,0.1)] content-stretch flex gap-[6px] items-center px-[12px] py-[4px] relative rounded-[9999px] shrink-0"
+                  data-name="Overlay+Border">
+                  <div aria-hidden="true"
+                    class="absolute border border-[rgba(2,178,79,0.3)] border-solid inset-0 pointer-events-none rounded-[9999px]">
+                  </div>
+                  <div
+                    class="bg-[#02b24f] relative rounded-[9999px] shadow-[0px_0px_4px_0px_rgba(0,229,191,0.7)] shrink-0 size-[6px]"
+                    data-name="Background+Shadow"></div>
+                  <div class="content-stretch flex flex-col items-start relative shrink-0" data-name="Container">
+                    <div
+                      class="[word-break:break-word] flex flex-col font-[&#x27;Inter:Medium&#x27;,sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#02b24f] text-[11px] tracking-[-0.0215px] whitespace-nowrap">
+                      <p class="leading-[16.5px]" id="drawer-badge">STEP 01</p>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="bg-[#cfd2e1] content-stretch flex gap-[6px] items-center px-[12px] py-[4px] relative rounded-[9999px] shrink-0"
+                  data-name="Background+Border">
+                  <div aria-hidden="true"
+                    class="absolute border border-[#c5c8d5] border-solid inset-0 pointer-events-none rounded-[9999px]">
+                  </div>
+                  <div class="content-stretch flex flex-col items-start relative shrink-0 size-[9px]"
+                    data-name="Container">
+                    <div class="absolute left-0 size-[9px] top-0" data-name="SVG"><svg
+                        class="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none"
+                        viewBox="0 0 9 9">
+                        <g clip-path="url(#clip0_1_455)" id="SVG">
+                          <path
+                            d="M8.15625 4.5C8.15625 5.4697 7.77104 6.39968 7.08536 7.08536C6.39968 7.77104 5.4697 8.15625 4.5 8.15625C3.5303 8.15625 2.60032 7.77104 1.91464 7.08536C1.22896 6.39968 0.84375 5.4697 0.84375 4.5C0.84375 3.5303 1.22896 2.60032 1.91464 1.91464C2.60032 1.22896 3.5303 0.84375 4.5 0.84375C5.4697 0.84375 6.39968 1.22896 7.08536 1.91464C7.77104 2.60032 8.15625 3.5303 8.15625 4.5ZM0 4.5C0 5.69347 0.474106 6.83807 1.31802 7.68198C2.16193 8.52589 3.30653 9 4.5 9C5.69347 9 6.83807 8.52589 7.68198 7.68198C8.52589 6.83807 9 5.69347 9 4.5C9 3.30653 8.52589 2.16193 7.68198 1.31802C6.83807 0.474106 5.69347 0 4.5 0C3.30653 0 2.16193 0.474106 1.31802 1.31802C0.474106 2.16193 0 3.30653 0 4.5ZM4.07812 2.10938V4.5C4.07812 4.64062 4.14844 4.77246 4.26621 4.85156L5.95371 5.97656C6.14707 6.10664 6.40898 6.05391 6.53906 5.85879C6.66914 5.66367 6.61641 5.40352 6.42129 5.27344L4.92188 4.275V2.10938C4.92188 1.87559 4.73379 1.6875 4.5 1.6875C4.26621 1.6875 4.07812 1.87559 4.07812 2.10938Z"
+                            fill="var(--fill-0, #A0AAB4)" id="Vector"></path>
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_1_455">
+                            <rect fill="white" height="9" width="9"></rect>
+                          </clipPath>
+                        </defs>
+                      </svg></div>
+                  </div>
+                  <div class="content-stretch flex flex-col items-start relative shrink-0" data-name="Container">
+                    <div
+                      class="[word-break:break-word] flex flex-col font-[&#x27;Inter:Medium&#x27;,sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#a0aab4] text-[11px] tracking-[0.0537px] whitespace-nowrap">
+                      <p class="leading-[16.5px]">Est. Duration: ~30 min</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="drawer-close-btn"
+            class="absolute bg-[#c5c8d5] content-stretch flex items-center justify-center right-[20px] rounded-[9999px] size-[32px] top-[20px] cursor-pointer"
+            data-name="Background">
+            <div class="h-[14px] relative shrink-0 w-[10.5px]" data-name="SVG"><svg
+                class="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 10.5 14">
+                <g clip-path="url(#clip0_1_408)" id="SVG">
+                  <path
+                    d="M9.91086 3.49419C10.3096 3.09542 10.3096 2.44784 9.91086 2.04907C9.51209 1.65031 8.86451 1.65031 8.46574 2.04907L5.10656 5.41144L1.74419 2.05226C1.34542 1.6535 0.697836 1.6535 0.299073 2.05226C-0.0996907 2.45103 -0.0996907 3.09862 0.299073 3.49738L3.66144 6.85656L0.302262 10.2189C-0.0965006 10.6177 -0.0965006 11.2653 0.302262 11.6641C0.701025 12.0628 1.34862 12.0628 1.74738 11.6641L5.10656 8.30167L8.46893 11.6609C8.86769 12.0596 9.51529 12.0596 9.91405 11.6609C10.3128 11.2621 10.3128 10.6145 9.91405 10.2157L6.55167 6.85656L9.91086 3.49419Z"
+                    fill="var(--fill-0, #A0AAB4)" id="Vector"></path>
+                </g>
+                <defs>
+                  <clipPath id="clip0_1_408">
+                    <rect fill="white" height="14" width="10.5"></rect>
+                  </clipPath>
+                </defs>
+              </svg></div>
+          </div>
+        </div>
+        <div
+          class="absolute bg-[#012265] content-stretch flex flex-col h-[37px] items-center justify-center left-[255.45px] p-[10px] rounded-[4px] top-[382.5px] w-[64px] cursor-pointer">
+          <div class="bg-transparent h-[24px] min-w-[44px] relative rounded-[4px] shrink-0 w-full"
+            data-name="Background+Border">
+            <div aria-hidden="true"
+              class="absolute border-2 border-transparent border-solid inset-0 pointer-events-none rounded-[4px]"></div>
+            <div class="flex flex-row items-center justify-center min-w-[inherit] size-full">
+              <div
+                class="content-stretch flex items-center justify-center min-w-[inherit] pb-[2.5px] pl-[12.8px] pr-[12.79px] pt-[1.5px] relative size-full">
+                <div
+                  class="[word-break:break-word] flex flex-[1_0_0] flex-col font-[&#x27;Open_Sans:Bold&#x27;,sans-serif] font-bold justify-center leading-[0] min-w-px relative text-[12px] text-white text-center tracking-[0.5977px]"
+                  style="font-variation-settings:&quot;wdth&quot; 100">
+                  <p class="leading-[16px]">P1</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="absolute bg-[#012265] content-stretch flex flex-col h-[37px] items-center justify-center left-[471px] p-[10px] rounded-[4px] top-[382.5px] w-[64px] cursor-pointer">
+          <div class="bg-transparent h-[24px] min-w-[44px] relative rounded-[4px] shrink-0 w-full"
+            data-name="Background+Border">
+            <div aria-hidden="true"
+              class="absolute border-2 border-transparent border-solid inset-0 pointer-events-none rounded-[4px]"></div>
+            <div class="flex flex-row items-center justify-center min-w-[inherit] size-full">
+              <div
+                class="content-stretch flex items-center justify-center min-w-[inherit] pb-[2.5px] pl-[12.8px] pr-[12.79px] pt-[1.5px] relative size-full">
+                <div
+                  class="[word-break:break-word] flex flex-[1_0_0] flex-col font-[&#x27;Open_Sans:Bold&#x27;,sans-serif] font-bold justify-center leading-[0] min-w-px relative text-[12px] text-white text-center tracking-[0.5977px]"
+                  style="font-variation-settings:&quot;wdth&quot; 100">
+                  <p class="leading-[16px]">P2</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="absolute content-stretch flex gap-[40px] items-center left-[599.77px] top-[382.5px]">
+          <div
+            class="bg-[#012265] content-stretch flex flex-col h-[37px] items-center justify-center p-[10px] relative rounded-[4px] shrink-0 w-[64px] cursor-pointer">
+            <div class="bg-transparent h-[24px] min-w-[44px] relative rounded-[4px] shrink-0 w-full"
+              data-name="Background+Border">
+              <div aria-hidden="true"
+                class="absolute border-2 border-transparent border-solid inset-0 pointer-events-none rounded-[4px]">
+              </div>
+              <div class="flex flex-row items-center justify-center min-w-[inherit] size-full">
+                <div
+                  class="content-stretch flex items-center justify-center min-w-[inherit] pb-[2.5px] pl-[12.8px] pr-[12.79px] pt-[1.5px] relative size-full">
+                  <div
+                    class="[word-break:break-word] flex flex-[1_0_0] flex-col font-[&#x27;Open_Sans:Bold&#x27;,sans-serif] font-bold justify-center leading-[0] min-w-px relative text-[12px] text-white text-center tracking-[0.5977px]"
+                    style="font-variation-settings:&quot;wdth&quot; 100">
+                    <p class="leading-[16px]">1</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="bg-[#012265] content-stretch flex flex-col h-[37px] items-center justify-center p-[10px] relative rounded-[4px] shrink-0 w-[64px] cursor-pointer">
+            <div class="bg-transparent h-[24px] min-w-[44px] relative rounded-[4px] shrink-0 w-full"
+              data-name="Background+Border">
+              <div aria-hidden="true"
+                class="absolute border-2 border-transparent border-solid inset-0 pointer-events-none rounded-[4px]">
+              </div>
+              <div class="flex flex-row items-center justify-center min-w-[inherit] size-full">
+                <div
+                  class="content-stretch flex items-center justify-center min-w-[inherit] pb-[2.5px] pl-[12.8px] pr-[12.79px] pt-[1.5px] relative size-full">
+                  <div
+                    class="[word-break:break-word] flex flex-[1_0_0] flex-col font-[&#x27;Open_Sans:Bold&#x27;,sans-serif] font-bold justify-center leading-[0] min-w-px relative text-[12px] text-white text-center tracking-[0.5977px]"
+                    style="font-variation-settings:&quot;wdth&quot; 100">
+                    <p class="leading-[16px]">2</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="absolute content-stretch flex gap-[40px] items-center left-[832.54px] top-[382px]">
+          <div
+            class="bg-[#012265] content-stretch flex flex-col h-[37px] items-center justify-center p-[10px] relative rounded-[4px] shrink-0 w-[64px] cursor-pointer">
+            <div class="bg-transparent h-[24px] min-w-[44px] relative rounded-[4px] shrink-0 w-full"
+              data-name="Background+Border">
+              <div aria-hidden="true"
+                class="absolute border-2 border-transparent border-solid inset-0 pointer-events-none rounded-[4px]">
+              </div>
+              <div class="flex flex-row items-center justify-center min-w-[inherit] size-full">
+                <div
+                  class="content-stretch flex items-center justify-center min-w-[inherit] pb-[2.5px] pl-[12.8px] pr-[12.79px] pt-[1.5px] relative size-full">
+                  <div
+                    class="[word-break:break-word] flex flex-[1_0_0] flex-col font-[&#x27;Open_Sans:Bold&#x27;,sans-serif] font-bold justify-center leading-[0] min-w-px relative text-[12px] text-white text-center tracking-[0.5977px]"
+                    style="font-variation-settings:&quot;wdth&quot; 100">
+                    <p class="leading-[16px]">3</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="bg-[#012265] content-stretch flex flex-col h-[37px] items-center justify-center p-[10px] relative rounded-[4px] shrink-0 w-[64px] cursor-pointer">
+            <div class="bg-transparent h-[24px] min-w-[44px] relative rounded-[4px] shrink-0 w-full"
+              data-name="Background+Border">
+              <div aria-hidden="true"
+                class="absolute border-2 border-transparent border-solid inset-0 pointer-events-none rounded-[4px]">
+              </div>
+              <div class="flex flex-row items-center justify-center min-w-[inherit] size-full">
+                <div
+                  class="content-stretch flex items-center justify-center min-w-[inherit] pb-[2.5px] pl-[12.8px] pr-[12.79px] pt-[1.5px] relative size-full">
+                  <div
+                    class="[word-break:break-word] flex flex-[1_0_0] flex-col font-[&#x27;Open_Sans:Bold&#x27;,sans-serif] font-bold justify-center leading-[0] min-w-px relative text-[12px] text-white text-center tracking-[0.5977px]"
+                    style="font-variation-settings:&quot;wdth&quot; 100">
+                    <p class="leading-[16px]">4</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="absolute content-stretch flex gap-[40px] items-center left-[1065.31px] top-[382px]">
+          <div
+            class="bg-[#012265] content-stretch flex flex-col h-[37px] items-center justify-center p-[10px] relative rounded-[4px] shrink-0 w-[64px] cursor-pointer">
+            <div class="bg-transparent h-[24px] min-w-[44px] relative rounded-[4px] shrink-0 w-full"
+              data-name="Background+Border">
+              <div aria-hidden="true"
+                class="absolute border-2 border-transparent border-solid inset-0 pointer-events-none rounded-[4px]">
+              </div>
+              <div class="flex flex-row items-center justify-center min-w-[inherit] size-full">
+                <div
+                  class="content-stretch flex items-center justify-center min-w-[inherit] pb-[2.5px] pl-[12.8px] pr-[12.79px] pt-[1.5px] relative size-full">
+                  <div
+                    class="[word-break:break-word] flex flex-[1_0_0] flex-col font-[&#x27;Open_Sans:Bold&#x27;,sans-serif] font-bold justify-center leading-[0] min-w-px relative text-[12px] text-white text-center tracking-[0.5977px]"
+                    style="font-variation-settings:&quot;wdth&quot; 100">
+                    <p class="leading-[16px]">5</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="bg-[#012265] content-stretch flex flex-col h-[37px] items-center justify-center p-[10px] relative rounded-[4px] shrink-0 w-[64px] cursor-pointer">
+            <div class="bg-transparent h-[24px] min-w-[44px] relative rounded-[4px] shrink-0 w-full"
+              data-name="Background+Border">
+              <div aria-hidden="true"
+                class="absolute border-2 border-transparent border-solid inset-0 pointer-events-none rounded-[4px]">
+              </div>
+              <div class="flex flex-row items-center justify-center min-w-[inherit] size-full">
+                <div
+                  class="content-stretch flex items-center justify-center min-w-[inherit] pb-[2.5px] pl-[12.8px] pr-[12.79px] pt-[1.5px] relative size-full">
+                  <div
+                    class="[word-break:break-word] flex flex-[1_0_0] flex-col font-[&#x27;Open_Sans:Bold&#x27;,sans-serif] font-bold justify-center leading-[0] min-w-px relative text-[12px] text-white text-center tracking-[0.5977px]"
+                    style="font-variation-settings:&quot;wdth&quot; 100">
+                    <p class="leading-[16px]">6</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="absolute bg-[#012265] content-stretch flex flex-col h-[37px] items-center justify-center left-[1282.28px] p-[10px] rounded-[4px] top-[382px] w-[64px] cursor-pointer">
+          <div class="bg-transparent h-[24px] min-w-[44px] relative rounded-[4px] shrink-0 w-full"
+            data-name="Background+Border">
+            <div aria-hidden="true"
+              class="absolute border-2 border-transparent border-solid inset-0 pointer-events-none rounded-[4px]"></div>
+            <div class="flex flex-row items-center justify-center min-w-[inherit] size-full">
+              <div
+                class="content-stretch flex items-center justify-center min-w-[inherit] pb-[2.5px] pl-[12.8px] pr-[12.79px] pt-[1.5px] relative size-full">
+                <div
+                  class="[word-break:break-word] flex flex-[1_0_0] flex-col font-[&#x27;Open_Sans:Bold&#x27;,sans-serif] font-bold justify-center leading-[0] min-w-px relative text-[12px] text-white text-center tracking-[0.5977px]"
+                  style="font-variation-settings:&quot;wdth&quot; 100">
+                  <p class="leading-[16px]">7</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="absolute left-[530.66px] top-[283.24px]"
+          style="width: 0; height: 0; border-left: 23.701px solid transparent; border-right: 23.701px solid transparent; border-bottom: 43.756px solid #ff0101;"
+          data-name="Border"></div>
+        <div class="absolute left-[975.15px] top-[283.24px]"
+          style="width: 0; height: 0; border-left: 23.701px solid transparent; border-right: 23.701px solid transparent; border-bottom: 43.756px solid #ff0101;"
+          data-name="Border"></div>
+        <div class="absolute left-[1129.99px] top-[283.74px]"
+          style="width: 0; height: 0; border-left: 23.701px solid transparent; border-right: 23.701px solid transparent; border-bottom: 43.756px solid #ff0101;"
+          data-name="Border"></div>
+        <div class="absolute left-[1255.14px] top-[283.24px]"
+          style="width: 0; height: 0; border-left: 23.701px solid transparent; border-right: 23.701px solid transparent; border-bottom: 43.756px solid #ff0101;"
+          data-name="Border"></div>
+        <div class="absolute left-[1398.63px] top-[283.24px]"
+          style="width: 0; height: 0; border-left: 23.701px solid transparent; border-right: 23.701px solid transparent; border-bottom: 43.756px solid #ff0101;"
+          data-name="Border"></div>
+        <div class="absolute h-[40.288px] left-[82px] top-[436px] w-[95.773px]">
+          <div class="absolute flex items-center justify-center left-[55.49px] size-[40.288px] top-0">
+            <div class="flex-none rotate-90">
+              <div class="relative size-[40.288px]">
+                <div class="absolute bottom-1/4 left-[6.7%] right-[6.7%] top-0"><svg class="block size-full" fill="none"
+                    preserveAspectRatio="none" viewBox="0 0 34.8905 30.2161">
+                    <path d="M34.0248 29.7158H0.865664L17.4448 1L34.0248 29.7158Z" fill="var(--fill-0, #E4E6E5)"
+                      id="Polygon 3" stroke="var(--stroke-0, #9DA5A8)"></path>
+                  </svg></div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="absolute bg-transparent content-stretch flex h-[24.562px] items-center justify-center left-0 pb-[5px] pl-[25px] pr-[23px] pt-[3px] top-[7.86px] w-[66.473px]">
+            <div aria-hidden="true" class="absolute border border-[#a0a4a4] border-solid inset-0 pointer-events-none">
+            </div>
+            <div
+              class="[word-break:break-word] flex flex-col font-[&#x27;Open_Sans:Bold&#x27;,sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[12px] text-black text-center tracking-[0.5977px] whitespace-nowrap"
+              style="font-variation-settings:&quot;wdth&quot; 100">
+              <p class="leading-[16px]">1</p>
+            </div>
+          </div>
+        </div>
+        <div class="absolute flex items-center justify-center left-[427.34px] size-[40.288px] top-[435.86px]">
+          <div class="flex-none rotate-90">
+            <div class="relative size-[40.288px]">
+              <div class="absolute bottom-1/4 left-[6.7%] right-[6.7%] top-0"><svg class="block size-full" fill="none"
+                  preserveAspectRatio="none" viewBox="0 0 34.8905 30.2161">
+                  <path d="M34.0248 29.7158H0.865664L17.4448 1L34.0248 29.7158Z" fill="var(--fill-0, #E4E6E5)"
+                    id="Polygon 3" stroke="var(--stroke-0, #9DA5A8)"></path>
+                </svg></div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="absolute bg-transparent content-stretch flex h-[24px] items-center justify-center pb-[5px] pl-[25px] pr-[23px] pt-[3px] top-[444px]"
+          style="left: 178px; width: 260px;">
+          <div aria-hidden="true" class="absolute border border-[#a0a4a4] border-solid inset-0 pointer-events-none">
+          </div>
+          <div
+            class="[word-break:break-word] flex flex-col font-[&#x27;Open_Sans:Bold&#x27;,sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[12px] text-black text-center tracking-[0.5977px] whitespace-nowrap"
+            style="font-variation-settings:&quot;wdth&quot; 100">
+            <p class="leading-[16px]">2</p>
+          </div>
+        </div>
+        <div
+          class="absolute bg-transparent content-stretch flex flex-col h-[226px] items-start left-[66px] pb-[13px] pl-[14px] pr-[132px] pt-[25px] top-[576px] w-[329px]">
+          <div class="content-stretch flex flex-col gap-[8px] items-start relative shrink-0 w-[175px]">
+            <div class="content-stretch flex gap-[6px] items-center relative shrink-0">
+              <div class="relative shrink-0 size-[44.079px]">
+                <div class="absolute flex items-center justify-center left-0 size-[44.079px] top-0">
+                  <div class="flex-none rotate-[-43.47deg]">
+                    <div class="bg-[#02b24f] relative size-[31.18px]"></div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="[word-break:break-word] flex flex-col font-[&#x27;Open_Sans:SemiBold&#x27;,sans-serif] font-semibold justify-center leading-[0] relative shrink-0 text-[#0f1117] text-[10.078px] text-center tracking-[0.2559px] whitespace-nowrap"
+                style="font-variation-settings:&quot;wdth&quot; 100">
+                <p class="leading-[14.398px]">XXXXXXXXX</p>
+              </div>
+            </div>
+            <div class="content-stretch flex gap-[6px] items-center relative shrink-0 w-full">
+              <div class="bg-[#012265] h-[37px] relative rounded-[4px] shrink-0 w-[64px]"></div>
+              <div
+                class="[word-break:break-word] content-stretch flex flex-col font-[&#x27;Open_Sans:SemiBold&#x27;,sans-serif] font-semibold gap-[2px] items-start justify-center leading-[0] relative shrink-0 text-[#0f1117] text-[10.078px] tracking-[0.2559px] w-[105px]">
+                <div class="flex flex-col justify-center relative shrink-0 w-full"
+                  style="font-variation-settings:&quot;wdth&quot; 100">
+                  <p class="leading-[14.398px]">DXXXXXXXXXXXX</p>
+                </div>
+                <div class="flex flex-col justify-center relative shrink-0 text-center w-full"
+                  style="font-variation-settings:&quot;wdth&quot; 100">
+                  <p class="leading-[14.398px]">PXXXXXXXXXXXXXXX</p>
+                </div>
+              </div>
+            </div>
+            <div class="content-stretch flex gap-[6px] items-center relative shrink-0 w-[175px]">
+              <div class="bg-[#6d349d] h-[24px] relative rounded-[4px] shrink-0 w-[64px]"></div>
+              <div class="content-stretch flex flex-col items-start justify-center relative shrink-0 w-[105px]">
+                <div
+                  class="[word-break:break-word] flex flex-col font-[&#x27;Open_Sans:SemiBold&#x27;,sans-serif] font-semibold justify-center leading-[0] relative shrink-0 text-[#0f1117] text-[10.078px] text-center tracking-[0.2559px] w-full"
+                  style="font-variation-settings:&quot;wdth&quot; 100">
+                  <p class="leading-[14.398px]">XXXXXXXXXXXXXXX</p>
+                </div>
+              </div>
+            </div>
+            <div class="content-stretch flex gap-[6px] items-center relative shrink-0">
+              <div class="h-[48.478px] relative shrink-0 w-[43.374px]"><svg class="absolute block inset-0 size-full"
+                  fill="none" preserveAspectRatio="none" viewBox="0 0 43.3743 48.4775">
+                  <g id="Frame 65">
+                    <path d="M5.77779 43.8596L7.70095 31.1937L17.7084 39.1922L5.77779 43.8596Z"
+                      fill="var(--fill-0, #161616)" id="Polygon 5"></path>
+                    <path d="M37.5626 4.57517L35.7329 17.2549L25.6668 9.3305L37.5626 4.57517Z"
+                      fill="var(--fill-0, #161616)" id="Polygon 6"></path>
+                    <line id="Line 1" stroke="var(--stroke-0, black)" stroke-dasharray="2 2" x1="14.4884" x2="28.7111"
+                      y1="32.5561" y2="15.1161"></line>
+                  </g>
+                </svg></div>
+              <div class="content-stretch flex flex-col items-start justify-center relative shrink-0 w-[105px]">
+                <div
+                  class="[word-break:break-word] flex flex-col font-[&#x27;Open_Sans:SemiBold&#x27;,sans-serif] font-semibold justify-center leading-[0] relative shrink-0 text-[#0f1117] text-[10.078px] text-center tracking-[0.2559px] w-full"
+                  style="font-variation-settings:&quot;wdth&quot; 100">
+                  <p class="leading-[14.398px]">XXXXXXXXXXXXXX</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="[word-break:break-word] absolute content-stretch flex flex-col font-[&#x27;Open_Sans:SemiBold&#x27;,sans-serif] font-semibold gap-[9.617px] items-start leading-[0] left-[870.66px] text-[#0f1117] text-[16.154px] top-[691.08px] tracking-[0.4101px] w-[43.276px]">
+          <div class="flex flex-col justify-center relative shrink-0 w-full"
+            style="font-variation-settings:&quot;wdth&quot; 100">
+            <p class="leading-[23.076px]">PZ</p>
+          </div>
+          <div class="flex flex-col justify-center relative shrink-0 w-full"
+            style="font-variation-settings:&quot;wdth&quot; 100">
+            <p class="leading-[23.076px]">PERS</p>
+          </div>
+          <div class="flex flex-col justify-center relative shrink-0 w-full"
+            style="font-variation-settings:&quot;wdth&quot; 100">
+            <p class="leading-[23.076px]">PERH</p>
+          </div>
+        </div>
+        <div class="absolute bg-[#f5f0d8] h-[263.741px] left-[949.66px] top-[680.5px] w-[588.285px]"></div>
+        <div
+          class="absolute content-stretch flex flex-col gap-[6px] items-center left-[982.09px] top-[699.01px] w-[523.434px]">
+          <div class="h-[68.985px] relative shrink-0 w-full">
+            <div
+              class="absolute bg-[#5f82a0] content-stretch flex h-[36px] items-center justify-center left-0 pb-[8.5px] pt-[7.5px] top-[16.99px] w-[472px]"
+              data-name="Frame">
+              <div
+                class="bg-transparent content-stretch flex h-[23.3px] items-center justify-center px-[107px] py-px relative shrink-0 w-[246.832px]">
+                <div
+                  class="[word-break:break-word] flex flex-col font-[&#x27;Open_Sans:SemiBold&#x27;,sans-serif] font-semibold justify-center leading-[0] relative shrink-0 text-[#0f1117] text-[14.442px] text-center tracking-[0.3667px] whitespace-nowrap"
+                  style="font-variation-settings:&quot;wdth&quot; 100">
+                  <p class="leading-[20.632px]">PER</p>
+                </div>
+              </div>
+            </div>
+            <div class="absolute flex items-center justify-center left-[454.45px] size-[68.985px] top-0">
+              <div class="flex-none rotate-90">
+                <div class="relative size-[68.985px]">
+                  <div class="absolute bottom-1/4 left-[6.7%] right-[6.7%] top-0"><svg class="block size-full"
+                      fill="none" preserveAspectRatio="none" viewBox="0 0 59.7426 51.7386">
+                      <path d="M29.8713 0L59.7426 51.7386H0L29.8713 0Z" fill="var(--fill-0, #5F82A0)" id="Polygon 2">
+                      </path>
+                    </svg></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content-stretch flex items-center relative shrink-0">
+            <div class="h-[28.329px] mr-[-14px] relative shrink-0 w-[113.747px]">
+              <div class="absolute h-[28.329px] left-0 top-0 w-[113.747px]"><svg
+                  class="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none"
+                  viewBox="0 0 113.747 28.3291">
+                  <path d="M92.1318 0.5L112.839 14.5811L92.1396 27.8291H0.5V0.5H92.1318Z" fill="var(--fill-0, #F5F0D8)"
+                    id="Rectangle 3" stroke="var(--stroke-0, #AFB4B7)"></path>
+                </svg></div>
+              <div class="absolute bg-transparent h-[20.134px] left-[12.73px] top-[4.1px] w-[63.148px]"></div>
+              <div
+                class="-translate-x-1/2 -translate-y-1/2 [word-break:break-word] absolute flex flex-col font-[&#x27;Open_Sans:SemiBold&#x27;,sans-serif] font-semibold justify-center leading-[0] left-[calc(50%-12.57px)] text-[#0f1117] text-[10.078px] text-center top-1/2 tracking-[0.2559px] whitespace-nowrap"
+                style="font-variation-settings:&quot;wdth&quot; 100">
+                <p class="leading-[14.398px]">EF</p>
+              </div>
+            </div>
+            <div class="h-[28.329px] mr-[-14px] relative shrink-0 w-[113.747px]">
+              <div class="absolute h-[28.329px] left-0 top-0 w-[113.747px]"><svg
+                  class="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none"
+                  viewBox="0 0 113.747 28.3291">
+                  <path
+                    d="M92.1318 0.5L112.839 14.5811L92.1396 27.8291H1.55371L19.416 15L19.9648 14.6055L19.4277 14.1963L1.47949 0.5H92.1318Z"
+                    fill="var(--fill-0, #F5F0D8)" id="Rectangle 3" stroke="var(--stroke-0, #AFB4B7)"></path>
+                </svg></div>
+              <div class="absolute bg-transparent h-[20.134px] left-[21.5px] top-[4.1px] w-[63.148px]"></div>
+              <div
+                class="-translate-x-1/2 -translate-y-1/2 [word-break:break-word] absolute flex flex-col font-[&#x27;Open_Sans:SemiBold&#x27;,sans-serif] font-semibold justify-center leading-[0] left-[calc(50%-3.3px)] text-[#0f1117] text-[10.078px] text-center top-1/2 tracking-[0.2559px] whitespace-nowrap"
+                style="font-variation-settings:&quot;wdth&quot; 100">
+                <p class="leading-[14.398px]">SA</p>
+              </div>
+            </div>
+            <div class="h-[28.329px] mr-[-14px] relative shrink-0 w-[113.747px]">
+              <div class="absolute h-[28.329px] left-0 top-0 w-[113.747px]"><svg
+                  class="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none"
+                  viewBox="0 0 113.747 28.3291">
+                  <path
+                    d="M92.1318 0.5L112.839 14.5811L92.1396 27.8291H1.55371L19.416 15L19.9648 14.6055L19.4277 14.1963L1.47949 0.5H92.1318Z"
+                    fill="var(--fill-0, #F5F0D8)" id="Rectangle 3" stroke="var(--stroke-0, #AFB4B7)"></path>
+                </svg></div>
+              <div class="absolute bg-transparent h-[20.134px] left-[21.5px] top-[4.1px] w-[63.148px]"></div>
+              <div
+                class="-translate-x-1/2 -translate-y-1/2 [word-break:break-word] absolute flex flex-col font-[&#x27;Open_Sans:SemiBold&#x27;,sans-serif] font-semibold justify-center leading-[0] left-[calc(50%-3.8px)] text-[#0f1117] text-[10.078px] text-center top-1/2 tracking-[0.2559px] whitespace-nowrap"
+                style="font-variation-settings:&quot;wdth&quot; 100">
+                <p class="leading-[14.398px]">SF</p>
+              </div>
+            </div>
+            <div class="h-[28.329px] relative shrink-0 w-[113.747px]">
+              <div class="absolute h-[28.329px] left-0 top-0 w-[113.747px]"><svg
+                  class="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none"
+                  viewBox="0 0 113.747 28.3291">
+                  <path
+                    d="M92.1318 0.5L112.839 14.5811L92.1396 27.8291H1.55371L19.416 15L19.9648 14.6055L19.4277 14.1963L1.47949 0.5H92.1318Z"
+                    fill="var(--fill-0, #F5F0D8)" id="Rectangle 3" stroke="var(--stroke-0, #AFB4B7)"></path>
+                </svg></div>
+              <div class="absolute bg-transparent h-[20.134px] left-[21.5px] top-[4.1px] w-[63.148px]"></div>
+              <div
+                class="-translate-x-1/2 -translate-y-1/2 [word-break:break-word] absolute flex flex-col font-[&#x27;Open_Sans:SemiBold&#x27;,sans-serif] font-semibold justify-center leading-[0] left-[calc(50%-3.8px)] text-[#0f1117] text-[10.078px] text-center top-1/2 tracking-[0.2559px] whitespace-nowrap"
+                style="font-variation-settings:&quot;wdth&quot; 100">
+                <p class="leading-[14.398px]">ETF</p>
+              </div>
+            </div>
+          </div>
+          <div class="h-[68.985px] relative shrink-0 w-full">
+            <div
+              class="absolute bg-[#5f82a0] content-stretch flex h-[36px] items-center justify-center left-0 pb-[8.5px] pt-[7.5px] top-[16.99px] w-[472px]"
+              data-name="Frame">
+              <div
+                class="bg-transparent content-stretch flex h-[23.3px] items-center justify-center px-[107px] py-px relative shrink-0 w-[246.832px]">
+                <div
+                  class="[word-break:break-word] flex flex-col font-[&#x27;Open_Sans:SemiBold&#x27;,sans-serif] font-semibold justify-center leading-[0] relative shrink-0 text-[#0f1117] text-[14.442px] text-center tracking-[0.3667px] whitespace-nowrap"
+                  style="font-variation-settings:&quot;wdth&quot; 100">
+                  <p class="leading-[20.632px]">PERH</p>
+                </div>
+              </div>
+            </div>
+            <div class="absolute flex items-center justify-center left-[454.45px] size-[68.985px] top-0">
+              <div class="flex-none rotate-90">
+                <div class="relative size-[68.985px]">
+                  <div class="absolute bottom-1/4 left-[6.7%] right-[6.7%] top-0"><svg class="block size-full"
+                      fill="none" preserveAspectRatio="none" viewBox="0 0 59.7426 51.7386">
+                      <path d="M29.8713 0L59.7426 51.7386H0L29.8713 0Z" fill="var(--fill-0, #5F82A0)" id="Polygon 2">
+                      </path>
+                    </svg></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content-stretch flex items-center relative shrink-0">
+            <div class="h-[28px] mr-[-29px] relative shrink-0 w-[206px]">
+              <div class="absolute h-[28.329px] left-0 top-0 w-[185.983px]"><svg
+                  class="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none"
+                  viewBox="0 0 185.983 28.3291">
+                  <path d="M171.188 0.5L185.265 14.583L171.197 27.8291H0.5V0.5H171.188Z" fill="var(--fill-0, #F5F0D8)"
+                    id="Rectangle 3" stroke="var(--stroke-0, #AEBAC6)"></path>
+                </svg></div>
+              <div
+                class="absolute bg-transparent content-stretch flex h-[20px] items-center justify-center left-[7px] px-[56px] py-[3px] top-[4px] w-[159px]">
+                <div
+                  class="[word-break:break-word] flex flex-col font-[&#x27;Open_Sans:SemiBold&#x27;,sans-serif] font-semibold justify-center leading-[0] relative shrink-0 text-[#0f1117] text-[10.078px] text-center tracking-[0.2559px] whitespace-nowrap"
+                  style="font-variation-settings:&quot;wdth&quot; 100">
+                  <p class="leading-[14.398px]">VP</p>
+                </div>
+              </div>
+            </div>
+            <div class="h-[28.329px] relative shrink-0 w-[185.983px]">
+              <div class="absolute h-[28.329px] left-0 top-0 w-[185.983px]"><svg
+                  class="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none"
+                  viewBox="0 0 185.983 28.3291">
+                  <path
+                    d="M171.188 0.5L185.265 14.583L171.197 27.8291H1.30371L15.6436 14.9307L16.0459 14.5693L15.6543 14.1973L1.25098 0.5H171.188Z"
+                    fill="var(--fill-0, #F5F0D8)" id="Rectangle 3" stroke="var(--stroke-0, #AEBAC6)"></path>
+                </svg></div>
+              <div
+                class="absolute bg-transparent content-stretch flex h-[20px] items-center justify-center left-[21.45px] px-[56px] py-[3px] top-[4.02px] w-[145px]">
+                <div
+                  class="[word-break:break-word] flex flex-col font-[&#x27;Open_Sans:SemiBold&#x27;,sans-serif] font-semibold justify-center leading-[0] relative shrink-0 text-[#0f1117] text-[10.078px] text-center tracking-[0.2559px] whitespace-nowrap"
+                  style="font-variation-settings:&quot;wdth&quot; 100">
+                  <p class="leading-[14.398px]">SI</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="absolute flex h-[234.368px] items-center justify-center left-[982.09px] top-[517.63px] w-0">
+          <div class="flex-none rotate-90">
+            <div class="h-0 relative w-[234.368px]">
+              <div class="absolute inset-[-1px_0_0_0]"><svg class="block size-full" fill="none"
+                  preserveAspectRatio="none" viewBox="0 0 234.368 1">
+                  <line id="Line 8" stroke="var(--stroke-0, black)" stroke-dasharray="6 6" x2="234.368" y1="0.5"
+                    y2="0.5"></line>
+                </svg></div>
+            </div>
+          </div>
+        </div>
+        <div class="absolute flex h-[76px] items-center justify-center left-[1147.81px] top-[540px] w-[1.227px]">
+          <div class="flex-none rotate-[89.08deg]">
+            <div class="h-0 relative w-[76.01px]">
+              <div class="absolute inset-[-1px_0_0_0]"><svg class="block size-full" fill="none"
+                  preserveAspectRatio="none" viewBox="0 0 76.0099 1">
+                  <line id="Line 9" stroke="var(--stroke-0, black)" stroke-dasharray="6 6" x2="76.0099" y1="0.5"
+                    y2="0.5"></line>
+                </svg></div>
+            </div>
+          </div>
+        </div>
+        <div class="absolute flex h-[76px] items-center justify-center left-[1276.8px] top-[542px] w-[1.227px]">
+          <div class="flex-none rotate-[89.08deg]">
+            <div class="h-0 relative w-[76.01px]">
+              <div class="absolute inset-[-1px_0_0_0]"><svg class="block size-full" fill="none"
+                  preserveAspectRatio="none" viewBox="0 0 76.0099 1">
+                  <line id="Line 9" stroke="var(--stroke-0, black)" stroke-dasharray="6 6" x2="76.0099" y1="0.5"
+                    y2="0.5"></line>
+                </svg></div>
+            </div>
+          </div>
+        </div>
+        <div class="absolute flex h-[72.924px] items-center justify-center left-[1413.61px] top-[543.08px] w-0">
+          <div class="flex-none rotate-90">
+            <div class="h-0 relative w-[72.924px]">
+              <div class="absolute inset-[-1px_0_0_0]"><svg class="block size-full" fill="none"
+                  preserveAspectRatio="none" viewBox="0 0 72.9241 1">
+                  <line id="Line 13" stroke="var(--stroke-0, black)" stroke-dasharray="6 6" x2="72.9241" y1="0.5"
+                    y2="0.5"></line>
+                </svg></div>
+            </div>
+          </div>
+        </div>
+        <div class="absolute flex h-[68.999px] items-center justify-center left-[1413.14px] top-[647px] w-[0.469px]">
+          <div class="flex-none rotate-[90.39deg]">
+            <div class="h-0 relative w-[69.001px]">
+              <div class="absolute inset-[-1px_0_0_0]"><svg class="block size-full" fill="none"
+                  preserveAspectRatio="none" viewBox="0 0 69.0009 1">
+                  <line id="Line 14" stroke="var(--stroke-0, black)" stroke-dasharray="6 6" x2="69.0009" y1="0.5"
+                    y2="0.5"></line>
+                </svg></div>
+            </div>
+          </div>
+        </div>
+        <div class="absolute flex h-[69px] items-center justify-center left-[1148.43px] top-[647px] w-[0.613px]">
+          <div class="flex-none rotate-[89.49deg]">
+            <div class="h-0 relative w-[69.003px]">
+              <div class="absolute inset-[-1px_0_0_0]"><svg class="block size-full" fill="none"
+                  preserveAspectRatio="none" viewBox="0 0 69.0027 1">
+                  <line id="Line 10" stroke="var(--stroke-0, black)" stroke-dasharray="6 6" x2="69.0027" y1="0.5"
+                    y2="0.5"></line>
+                </svg></div>
+            </div>
+          </div>
+        </div>
+        <div class="absolute flex h-[69px] items-center justify-center left-[1278.03px] top-[647px] w-[0.613px]">
+          <div class="flex-none rotate-[89.49deg]">
+            <div class="h-0 relative w-[69.003px]">
+              <div class="absolute inset-[-1px_0_0_0]"><svg class="block size-full" fill="none"
+                  preserveAspectRatio="none" viewBox="0 0 69.0027 1">
+                  <line id="Line 10" stroke="var(--stroke-0, black)" stroke-dasharray="6 6" x2="69.0027" y1="0.5"
+                    y2="0.5"></line>
+                </svg></div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="absolute bg-white content-stretch flex h-[56px] items-center justify-between left-0 pl-[24px] pr-[23.99px] top-0 w-[1920px]"
+          data-name="Background+HorizontalBorder">
+          <div aria-hidden="true" class="absolute border-[#c5c8d5] border-b border-solid inset-0 pointer-events-none">
+          </div>
+          <div class="content-stretch flex items-center min-w-[160px] pr-[9.13px] relative shrink-0"
+            data-name="Container">
+            <div class="h-[22.5px] relative shrink-0 w-[73.03px]" data-name="Container">
+              <div
+                class="-translate-y-1/2 [word-break:break-word] absolute flex flex-col font-[&#x27;Inter:Bold&#x27;,sans-serif] font-bold justify-center leading-[0] left-0 not-italic text-[#27ae60] text-[15px] top-[10.5px] tracking-[0.375px] w-[73.144px]">
+                <p class="leading-[22.5px]">Company</p>
+              </div>
+            </div>
+            <div class="content-stretch flex flex-col items-start pl-[4px] relative shrink-0" data-name="Margin">
+              <div
+                class="[word-break:break-word] flex flex-col font-[&#x27;Inter:Bold&#x27;,sans-serif] font-bold justify-center leading-[0] not-italic relative shrink-0 text-[#0d0d0d] text-[15px] tracking-[0.375px] w-[73.955px]">
+                <p class="leading-[22.5px]">Workflow</p>
+              </div>
+            </div>
+          </div>
+          <!-- Spacer to preserve navbar layout flow -->
+          <div class="content-stretch flex gap-[12px] items-center relative shrink-0 w-[180px]" data-name="Container">
+          </div>
+          <div class="absolute left-1/2 -translate-x-1/2 top-[19.25px] content-stretch flex flex-col items-center"
+            data-name="Container">
+            <div
+              class="flex flex-col font-[&#x27;Inter:Semi_Bold&#x27;,sans-serif] font-semibold justify-center leading-[0] not-italic relative shrink-0 text-[#a0aab4] text-[11px] tracking-[2px] uppercase whitespace-nowrap">
+              <p class="leading-[16.5px] whitespace-nowrap">Workflow Canvas</p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="absolute bg-white content-stretch flex flex-col gap-[16px] h-[1024px] items-center left-0 py-[16px] top-[56px] w-[48.01px]"
+          data-name="Nav">
+          <div aria-hidden="true" class="absolute border-[#c9ccda] border-r border-solid inset-0 pointer-events-none">
+          </div>
+          <div
+            class="bg-[rgba(212,215,227,0.2)] content-stretch flex items-center justify-center relative rounded-[8px] shrink-0 size-[32px] cursor-pointer"
+            data-name="Button">
+            <svg class="size-[16px] text-[#27ae60]" viewBox="0 0 24 24" fill="currentColor">
+              <!-- Row 1 -->
+              <rect x="3" y="7" width="4" height="4" rx="1" />
+              <rect x="10" y="7" width="4" height="4" rx="1" />
+              <rect x="17" y="7" width="4" height="4" rx="1" />
+              <!-- Row 2 -->
+              <rect x="3" y="13" width="4" height="4" rx="1" />
+              <rect x="10" y="13" width="4" height="4" rx="1" />
+              <rect x="17" y="13" width="4" height="4" rx="1" />
+            </svg>
+          </div>
+          <div class="flex-[1_0_0] min-h-[32px] relative" data-name="Margin">
+            <div class="flex flex-col justify-end min-h-[inherit] size-full">
+              <div
+                class="content-stretch flex flex-col items-start justify-end min-h-[inherit] pt-[808px] relative size-full">
+                <div class="content-stretch flex flex-col items-start opacity-0 relative shrink-0"
+                  data-name="Container">
+                  <div
+                    class="content-stretch flex items-center justify-center relative rounded-[8px] shrink-0 size-[32px]"
+                    data-name="Button">
+                    <div class="content-stretch flex flex-col items-center relative shrink-0 size-[14px]"
+                      data-name="Container"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="absolute flex h-[108px] items-center justify-center left-[598px] top-[219px] w-[48px]">
+          <div class="flex-none rotate-180">
+            <div class="h-[108px] relative w-[48px]">
+              <div class="absolute bg-[#a6a6a6] h-[86.782px] left-[13.02px] top-[25.93px] w-[24.782px]"></div>
+              <div class="absolute h-[35.198px] left-[4.9px] top-0 w-[41.027px]">
+                <div class="absolute bottom-1/4 left-[6.7%] right-[6.7%] top-0"><svg class="block size-full" fill="none"
+                    preserveAspectRatio="none" viewBox="0 0 35.5301 26.3989">
+                    <path d="M17.765 0L35.5301 26.3989H0L17.765 0Z" fill="var(--fill-0, #A6A6A6)" id="Polygon 1"></path>
+                  </svg></div>
+              </div>
+              <div class="absolute flex h-[59px] items-center justify-center left-[22px] top-[31px] w-[13px]">
+                <div class="-rotate-90 flex-none">
+                  <div class="h-[13px] relative w-[59px]">
+                    <div class="absolute bg-transparent h-[13.816px] left-[-0.16px] top-[-2.82px] w-[59.33px]"></div>
+                    <div
+                      class="-translate-x-1/2 -translate-y-1/2 [word-break:break-word] absolute flex flex-col font-[&#x27;Open_Sans:SemiBold&#x27;,sans-serif] font-semibold justify-center leading-[0] left-[calc(50%+0.5px)] text-[#0f1117] text-[11px] text-center top-[calc(50%-1.5px)] tracking-[0.2793px] whitespace-nowrap"
+                      style="font-variation-settings:&quot;wdth&quot; 100">
+                      <p class="leading-[8.058px]">T</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="absolute left-[598px] size-[44.079px] top-[185.5px] cursor-pointer">
+          <div class="absolute flex items-center justify-center left-0 size-[44.079px] top-0">
+            <div class="flex-none rotate-[-43.47deg]">
+              <div class="bg-[#02b24f] relative size-[31.18px]"></div>
+            </div>
+          </div>
+          <div
+            class="-translate-x-1/2 -translate-y-1/2 [word-break:break-word] absolute flex flex-col font-[&#x27;Open_Sans:SemiBold&#x27;,sans-serif] font-semibold justify-center leading-[0] left-1/2 text-[#0f1117] text-[10.078px] text-center top-1/2 tracking-[0.2559px] whitespace-nowrap"
+            style="font-variation-settings:&quot;wdth&quot; 100">
+            <p class="leading-[14.398px]">T5</p>
+          </div>
+        </div>
+        <div
+          class="-translate-x-1/2 -translate-y-1/2 [word-break:break-word] absolute flex flex-col font-[&#x27;Open_Sans:SemiBold&#x27;,sans-serif] font-semibold justify-center leading-[0] left-[1420.42px] text-[14.442px] text-black text-center top-[214.5px] tracking-[0.3667px] whitespace-nowrap"
+          style="font-variation-settings:&quot;wdth&quot; 100">
+          <p class="leading-[20.632px]">PZPEW XXXXXXXXXXXXX</p>
+        </div>
+        <div
+          class="-translate-y-1/2 [word-break:break-word] absolute flex flex-col font-[&#x27;Open_Sans:SemiBold&#x27;,sans-serif] font-semibold justify-center leading-[0] left-[886.54px] text-[14.442px] text-black top-[115.49px] tracking-[0.3667px] whitespace-nowrap"
+          style="font-variation-settings:&quot;wdth&quot; 100">
+          <p class="leading-[20.632px] mb-0 whitespace-pre">PZPEW </p>
+          <p class="leading-[20.632px] whitespace-pre">XXXXXXXXXXXXX</p>
+        </div>
+      </div>
+    </div>
+  </div>
+    <!-- Fixed Zoom Controls (stays viewport-relative and doesn't scale) -->
+    <div id="fixed-zoom-controls"
+      style="position: fixed; top: 11px; right: 24px; z-index: 9999; display: flex; align-items: center; gap: 12px; pointer-events: auto;">
+      <div
+        class="bg-[#1b9a53] content-stretch flex h-[34px] items-center p-[4px] relative rounded-[9999px] shrink-0 select-none shadow-sm"
+        data-name="Frame">
+        <div aria-hidden="true"
+          class="absolute border border-transparent border-solid inset-0 pointer-events-none rounded-[9999px]">
+        </div>
+        <div id="zoom-out"
+          class="content-stretch flex h-full items-center justify-center relative rounded-[9999px] shrink-0 w-[28px] cursor-pointer transition-colors hover:bg-white/20"
+          data-name="Frame">
+          <div class="content-stretch flex flex-col items-center relative shrink-0" data-name="Container">
+            <div
+              class="[word-break:break-word] flex flex-col font-sans justify-center leading-[0] not-italic relative shrink-0 text-white text-[14px] font-bold text-center whitespace-nowrap">
+              <p class="leading-[10px]">-</p>
+            </div>
+          </div>
+        </div>
+        <div class="content-stretch flex flex-col items-start px-[8px] relative shrink-0" data-name="Container">
+          <div
+            class="[word-break:break-word] flex flex-col font-[&#x27;Inter:Medium&#x27;,sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-white text-[11px] w-[29.886px]">
+            <p id="zoom-text" class="leading-[16.5px]">100%</p>
+          </div>
+        </div>
+        <div id="zoom-in"
+          class="content-stretch flex h-full items-center justify-center relative rounded-[9999px] shrink-0 w-[28px] cursor-pointer transition-colors hover:bg-white/20"
+          data-name="Button">
+          <div class="content-stretch flex flex-col items-center relative shrink-0" data-name="Container">
+            <div
+              class="[word-break:break-word] flex flex-col font-sans justify-center leading-[0] relative shrink-0 text-white text-[14px] font-bold text-center w-[8.75px]">
+              <p class="leading-[10px]">+</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Details Drawer Panel -->
+    <div id="drawer-panel" class="fixed inset-y-0 right-0 z-[10000] flex flex-col w-full sm:w-[480px] bg-slate-900/95 text-slate-100 backdrop-blur-md border-l border-slate-700/60 shadow-2xl translate-x-full" style="display: none;">
+      <!-- Drawer Header -->
+      <div class="flex items-center justify-between px-6 py-5 border-b border-slate-800">
+        <div class="flex items-center gap-3">
+          <span id="drawer-badge" class="px-2.5 py-1 text-xs font-semibold tracking-wider text-emerald-400 bg-emerald-950/50 rounded-full border border-emerald-800/60 uppercase">
+            STEP 01
+          </span>
+          <h3 id="drawer-title" class="text-lg font-bold text-white tracking-wide">Process Details</h3>
+        </div>
+        <button id="drawer-close-btn" class="p-2 text-slate-400 hover:text-white bg-slate-800/40 hover:bg-slate-850 rounded-full transition-all duration-200 cursor-pointer" aria-label="Close drawer">
+          <svg class="size-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Drawer Content Body -->
+      <div class="flex-1 overflow-y-auto px-6 py-6 space-y-6">
+        <!-- Process Title / Step Name -->
+        <div>
+          <label class="text-xs font-bold text-slate-500 uppercase tracking-widest block mb-1">Process Step</label>
+          <h2 id="drawer-step-name" class="text-2xl font-extrabold text-white leading-snug">Initial Client Onboarding</h2>
+        </div>
+
+        <!-- Objective Card -->
+        <div class="p-5 rounded-xl bg-slate-800/40 border border-slate-750/50 space-y-2">
+          <div class="flex items-center gap-2 text-emerald-400">
+            <svg class="size-4 shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <span class="text-xs font-bold uppercase tracking-wider">Key Objective</span>
+          </div>
+          <p id="drawer-objective" class="text-sm text-slate-200 font-medium leading-relaxed">Establish secure communication and data protocols with new client stakeholders.</p>
+        </div>
+
+        <!-- Description Section -->
+        <div class="space-y-2">
+          <label class="text-xs font-bold text-slate-500 uppercase tracking-widest block">Detailed Description</label>
+          <p id="drawer-description" class="text-sm text-slate-300 leading-relaxed font-normal">
+            This step encompasses the initial touchpoints between the platform and client systems...
+          </p>
+        </div>
+
+        <!-- Additional Info Section -->
+        <div class="space-y-2 pt-4 border-t border-slate-800">
+          <label class="text-xs font-bold text-slate-500 uppercase tracking-widest block">Additional Information</label>
+          <p id="drawer-additional-info" class="text-sm text-slate-400 leading-relaxed italic">
+            Upon successful completion, the workflow automatically proceeds to the Validation stage...
+          </p>
+        </div>
+      </div>
+
+      <!-- Drawer Footer -->
+      <div class="px-6 py-4 bg-slate-950/40 border-t border-slate-800 text-center text-xs text-slate-500">
+        Company Workflow Canvas • Interactive Node Details
+      </div>
+    </div>
+  </div>
+  <script>
+    var stepsData = {};
+  </script>
+  <script src="data/1.js"></script>
+  <script src="data/2.js"></script>
+  <script src="data/3.js"></script>
+  <script src="data/4.js"></script>
+  <script src="data/5.js"></script>
+  <script src="data/6.js"></script>
+  <script src="data/7.js"></script>
+  <script src="data/8.js"></script>
+  <script src="data/9.js"></script>
+  <script src="data/10.js"></script>
+  <script src="data/T1.js"></script>
+  <script src="data/T2.js"></script>
+  <script src="data/T3.js"></script>
+  <script src="data/T4.js"></script>
+  <script src="data/T5.js"></script>
+  <script src="data/T6.js"></script>
+  <script src="data/G1.js"></script>
+  <script src="data/G2.js"></script>
+  <script src="data/G3.js"></script>
+  <script src="data/G4.js"></script>
+  <script src="data/G5.js"></script>
+  <script src="data/G6.js"></script>
+  <script src="data/G7.js"></script>
+  <script src="data/G8.js"></script>
+  <script src="data/P1.js"></script>
+  <script src="data/P2.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
