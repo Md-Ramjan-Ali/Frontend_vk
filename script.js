@@ -231,7 +231,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ── Click events ────────────────────────────────────────────────
   document.querySelectorAll('.cursor-pointer').forEach(node => {
-    node.addEventListener('click', () => {
+    node.addEventListener('click', (e) => {
+      if (e.target.closest('.pointer-events-none')) {
+        return;
+      }
       const key = getStepKey(node);
       if (key) { populateDrawer(key); openDrawer(); }
     });
