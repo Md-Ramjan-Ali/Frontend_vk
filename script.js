@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Update wrapper width dynamically based on drawer state
     canvasWrapper.style.width    = drawerOpen ? 'calc(100% - 360px)' : '100%';
     canvasWrapper.style.height   = '100%';
-    canvasWrapper.style.overflow = 'auto';
+    canvasWrapper.style.overflow = drawerOpen ? 'hidden' : 'auto';
 
     const vw    = canvasWrapper.clientWidth;
 
