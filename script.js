@@ -32,10 +32,10 @@ document.addEventListener('DOMContentLoaded', () => {
       canvasContainer.style.height = Math.ceil(DESIGN_H * scale) + 'px';
     }
 
-    // Wrapper occupies full viewport to keep scrollbars visible at boundaries
+    // Wrapper occupies full screen underneath fixed top navbar and left sidebar
     canvasWrapper.style.width    = '100%';
     canvasWrapper.style.height   = '100%';
-    canvasWrapper.style.overflow = 'auto'; // Always allow scrolling on overflow
+    canvasWrapper.style.overflow = 'auto';
   }
 
   applyLayout();
@@ -78,8 +78,8 @@ document.addEventListener('DOMContentLoaded', () => {
     canvasWrapper.style.cursor = 'grab';
 
     canvasWrapper.addEventListener('mousedown', (e) => {
-      // Don't drag if clicking buttons, zoom controls, the drawer, or clickable nodes
-      if (e.target.closest('#fixed-zoom-controls') || e.target.closest('#drawer-panel') || e.target.closest('.cursor-pointer')) {
+      // Don't drag if clicking zoom controls, the drawer, the fixed navbar, fixed sidebar, or clickable nodes
+      if (e.target.closest('#fixed-zoom-controls') || e.target.closest('#drawer-panel') || e.target.closest('.cursor-pointer') || e.target.closest('[data-name="Background+HorizontalBorder"]') || e.target.closest('[data-name="Nav"]')) {
         return;
       }
       isDown = true;
@@ -113,7 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Touch support for mobile devices
     canvasWrapper.addEventListener('touchstart', (e) => {
-      if (e.target.closest('#fixed-zoom-controls') || e.target.closest('#drawer-panel') || e.target.closest('.cursor-pointer')) {
+      if (e.target.closest('#fixed-zoom-controls') || e.target.closest('#drawer-panel') || e.target.closest('.cursor-pointer') || e.target.closest('[data-name="Background+HorizontalBorder"]') || e.target.closest('[data-name="Nav"]')) {
         return;
       }
       isDown = true;

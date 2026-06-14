@@ -35,12 +35,17 @@
 
     /* Premium hover effects for nodes */
     .cursor-pointer {
-      transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), filter 0.2s ease, opacity 0.2s ease;
+      transition: opacity 0.2s ease;
+    }
+    .cursor-pointer > div:first-child {
+      transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), filter 0.2s ease;
       transform-origin: center;
     }
-    .cursor-pointer:hover {
+    .cursor-pointer:hover > div:first-child {
       transform: scale(1.15) !important;
       filter: drop-shadow(0 4px 12px rgba(2, 178, 79, 0.45));
+    }
+    .cursor-pointer:hover {
       opacity: 0.95;
     }
 
@@ -56,6 +61,58 @@
 </head>
 
 <body class="w-full h-full bg-white overflow-hidden">
+  <!-- Fixed Top Navbar -->
+  <div class="flex items-center justify-between pl-[24px] pr-[23.99px]" style="position: fixed; top: 0; left: 0; width: 100%; height: 56px; background-color: #ffffff; border-bottom: 1px solid #c5c8d5; z-index: 9999;" data-name="Background+HorizontalBorder">
+    <div aria-hidden="true" class="absolute border-[#c5c8d5] border-b border-solid inset-0 pointer-events-none"></div>
+    <div class="content-stretch flex items-center min-w-[160px] pr-[9.13px] relative shrink-0" data-name="Container">
+      <div class="h-[22.5px] relative shrink-0 w-[73.03px]" data-name="Container">
+        <div class="-translate-y-1/2 [word-break:break-word] absolute flex flex-col font-['Inter:Bold',sans-serif] font-bold justify-center leading-[0] left-0 not-italic text-[#27ae60] text-[15px] top-[10.5px] tracking-[0.375px] w-[73.144px]">
+          <p class="leading-[22.5px]">Company</p>
+        </div>
+      </div>
+      <div class="content-stretch flex flex-col items-start pl-[4px] relative shrink-0" data-name="Margin">
+        <div class="[word-break:break-word] flex flex-col font-['Inter:Bold',sans-serif] font-bold justify-center leading-[0] not-italic relative shrink-0 text-[#0d0d0d] text-[15px] tracking-[0.375px] w-[73.955px]">
+          <p class="leading-[22.5px]">Workflow</p>
+        </div>
+      </div>
+    </div>
+    <!-- Spacer to preserve navbar layout flow -->
+    <div class="content-stretch flex gap-[12px] items-center relative shrink-0 w-[180px]" data-name="Container"></div>
+    <div class="absolute left-1/2 -translate-x-1/2 top-[19.25px] content-stretch flex flex-col items-center" data-name="Container">
+      <div class="flex flex-col font-['Inter:Semi_Bold',sans-serif] font-semibold justify-center leading-[0] not-italic relative shrink-0 text-[#a0aab4] text-[11px] tracking-[2px] uppercase whitespace-nowrap">
+        <p class="leading-[16.5px] whitespace-nowrap">Workflow Canvas</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Fixed Left Sidebar -->
+  <div class="flex flex-col gap-[16px] items-center py-[16px]" style="position: fixed; top: 56px; left: 0; width: 48px; height: calc(100vh - 56px); background-color: #ffffff; border-right: 1px solid #c9ccda; z-index: 9999;" data-name="Nav">
+    <div aria-hidden="true" class="absolute border-[#c9ccda] border-r border-solid inset-0 pointer-events-none"></div>
+    <div class="bg-[rgba(212,215,227,0.2)] content-stretch flex items-center justify-center relative rounded-[8px] shrink-0 size-[32px] cursor-pointer" data-name="Button">
+      <svg class="size-[16px] text-[#27ae60]" viewBox="0 0 24 24" fill="currentColor">
+        <!-- Row 1 -->
+        <rect x="3" y="7" width="4" height="4" rx="1" />
+        <rect x="10" y="7" width="4" height="4" rx="1" />
+        <rect x="17" y="7" width="4" height="4" rx="1" />
+        <!-- Row 2 -->
+        <rect x="3" y="13" width="4" height="4" rx="1" />
+        <rect x="10" y="13" width="4" height="4" rx="1" />
+        <rect x="17" y="13" width="4" height="4" rx="1" />
+      </svg>
+    </div>
+    <div class="flex-[1_0_0] min-h-[32px] relative" data-name="Margin">
+      <div class="flex flex-col justify-end min-h-[inherit] size-full">
+        <div class="content-stretch flex flex-col items-start justify-end min-h-[inherit] pt-[808px] relative size-full">
+          <div class="content-stretch flex flex-col items-start opacity-0 relative shrink-0" data-name="Container">
+            <div class="content-stretch flex items-center justify-center relative rounded-[8px] shrink-0 size-[32px]" data-name="Button">
+              <div class="content-stretch flex flex-col items-center relative shrink-0 size-[14px]" data-name="Container"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div id="canvas-wrapper" class="w-full h-full bg-white" style="overflow:hidden; position:relative;">
     <div id="canvas-container" style="position: relative; overflow: visible;">
       <div id="canvas-root" style="width: 1920px; min-height: 1080px; position: relative; transform-origin: top left;">
@@ -1562,73 +1619,7 @@
             </div>
           </div>
         </div>
-        <div
-          class="absolute bg-white content-stretch flex h-[56px] items-center justify-between left-0 pl-[24px] pr-[23.99px] top-0 w-[1920px]"
-          data-name="Background+HorizontalBorder">
-          <div aria-hidden="true" class="absolute border-[#c5c8d5] border-b border-solid inset-0 pointer-events-none">
-          </div>
-          <div class="content-stretch flex items-center min-w-[160px] pr-[9.13px] relative shrink-0"
-            data-name="Container">
-            <div class="h-[22.5px] relative shrink-0 w-[73.03px]" data-name="Container">
-              <div
-                class="-translate-y-1/2 [word-break:break-word] absolute flex flex-col font-[&#x27;Inter:Bold&#x27;,sans-serif] font-bold justify-center leading-[0] left-0 not-italic text-[#27ae60] text-[15px] top-[10.5px] tracking-[0.375px] w-[73.144px]">
-                <p class="leading-[22.5px]">Company</p>
-              </div>
-            </div>
-            <div class="content-stretch flex flex-col items-start pl-[4px] relative shrink-0" data-name="Margin">
-              <div
-                class="[word-break:break-word] flex flex-col font-[&#x27;Inter:Bold&#x27;,sans-serif] font-bold justify-center leading-[0] not-italic relative shrink-0 text-[#0d0d0d] text-[15px] tracking-[0.375px] w-[73.955px]">
-                <p class="leading-[22.5px]">Workflow</p>
-              </div>
-            </div>
-          </div>
-          <!-- Spacer to preserve navbar layout flow -->
-          <div class="content-stretch flex gap-[12px] items-center relative shrink-0 w-[180px]" data-name="Container">
-          </div>
-          <div class="absolute left-1/2 -translate-x-1/2 top-[19.25px] content-stretch flex flex-col items-center"
-            data-name="Container">
-            <div
-              class="flex flex-col font-[&#x27;Inter:Semi_Bold&#x27;,sans-serif] font-semibold justify-center leading-[0] not-italic relative shrink-0 text-[#a0aab4] text-[11px] tracking-[2px] uppercase whitespace-nowrap">
-              <p class="leading-[16.5px] whitespace-nowrap">Workflow Canvas</p>
-            </div>
-          </div>
-        </div>
-        <div
-          class="absolute bg-white content-stretch flex flex-col gap-[16px] h-[1024px] items-center left-0 py-[16px] top-[56px] w-[48.01px]"
-          data-name="Nav">
-          <div aria-hidden="true" class="absolute border-[#c9ccda] border-r border-solid inset-0 pointer-events-none">
-          </div>
-          <div
-            class="bg-[rgba(212,215,227,0.2)] content-stretch flex items-center justify-center relative rounded-[8px] shrink-0 size-[32px] cursor-pointer"
-            data-name="Button">
-            <svg class="size-[16px] text-[#27ae60]" viewBox="0 0 24 24" fill="currentColor">
-              <!-- Row 1 -->
-              <rect x="3" y="7" width="4" height="4" rx="1" />
-              <rect x="10" y="7" width="4" height="4" rx="1" />
-              <rect x="17" y="7" width="4" height="4" rx="1" />
-              <!-- Row 2 -->
-              <rect x="3" y="13" width="4" height="4" rx="1" />
-              <rect x="10" y="13" width="4" height="4" rx="1" />
-              <rect x="17" y="13" width="4" height="4" rx="1" />
-            </svg>
-          </div>
-          <div class="flex-[1_0_0] min-h-[32px] relative" data-name="Margin">
-            <div class="flex flex-col justify-end min-h-[inherit] size-full">
-              <div
-                class="content-stretch flex flex-col items-start justify-end min-h-[inherit] pt-[808px] relative size-full">
-                <div class="content-stretch flex flex-col items-start opacity-0 relative shrink-0"
-                  data-name="Container">
-                  <div
-                    class="content-stretch flex items-center justify-center relative rounded-[8px] shrink-0 size-[32px]"
-                    data-name="Button">
-                    <div class="content-stretch flex flex-col items-center relative shrink-0 size-[14px]"
-                      data-name="Container"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+
         <div class="absolute flex h-[108px] items-center justify-center left-[598px] top-[219px] w-[48px]">
           <div class="flex-none rotate-180">
             <div class="h-[108px] relative w-[48px]">
