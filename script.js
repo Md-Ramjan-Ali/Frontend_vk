@@ -7,8 +7,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const drawer          = document.getElementById('drawer-panel');
 
   // ── Constants ──────────────────────────────────────────────────
-  const DESIGN_W   = 1920;   // total canvas width
-  const CONTENT_W  = 1920;
+  const DESIGN_W   = 1540;   // total canvas width
+  const CONTENT_W  = 1540;
   const DESIGN_H   = 1080;
 
   let drawerOpen = false;
@@ -18,24 +18,32 @@ document.addEventListener('DOMContentLoaded', () => {
   function applyLayout() {
     if (!canvasRoot || !canvasWrapper) return;
 
-    const vw    = window.innerWidth;
-    const baseScale = vw / DESIGN_W;
+    // Update wrapper width dynamically based on drawer state
+    canvasWrapper.style.width    = drawerOpen ? 'calc(100% - 360px)' : '100%';
+    canvasWrapper.style.height   = '100%';
+    canvasWrapper.style.overflow = 'auto';
+
+    const vw    = canvasWrapper.clientWidth;
+
+    // Calculate scale to fit viewport width (with spacing accounted for)
+    const baseScale = (vw - 48 - 4) / DESIGN_W;
+
     const scale = baseScale * zoomMultiplier;
 
-    // Apply scale to canvas-root
-    canvasRoot.style.transform       = `scale(${scale})`;
+    // Calculate translation offsets to maintain constant 4px spacing from top navbar and left sidebar
+    const xOffset = 48 * (1 - scale) + 4; // 48px is fixed sidebar width, 4px spacing
+    const yOffset = 56 * (1 - scale) + 4; // 56px is fixed navbar height, 4px spacing
+
+    // Apply scale, translation, and width to canvas-root
+    canvasRoot.style.width           = DESIGN_W + 'px';
+    canvasRoot.style.transform       = `translate(${xOffset}px, ${yOffset}px) scale(${scale})`;
     canvasRoot.style.transformOrigin = 'top left';
 
     // Set canvas-container layout size to match scaled size so scroll bounds are accurate
     if (canvasContainer) {
-      canvasContainer.style.width  = Math.ceil(DESIGN_W * scale) + 'px';
-      canvasContainer.style.height = Math.ceil(DESIGN_H * scale) + 'px';
+      canvasContainer.style.width  = Math.ceil(DESIGN_W * scale + xOffset) + 'px';
+      canvasContainer.style.height = Math.ceil(DESIGN_H * scale + yOffset) + 'px';
     }
-
-    // Wrapper occupies full screen underneath fixed top navbar and left sidebar
-    canvasWrapper.style.width    = '100%';
-    canvasWrapper.style.height   = '100%';
-    canvasWrapper.style.overflow = 'auto';
   }
 
   applyLayout();
@@ -146,6 +154,9 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!drawer) return;
     drawerOpen = true;
     drawer.style.display = 'flex';
+    
+    // Keep zoom controls fixed at default position
+
     // Small timeout to allow transition to register
     setTimeout(() => {
       drawer.classList.remove('translate-x-full');
@@ -159,6 +170,8 @@ document.addEventListener('DOMContentLoaded', () => {
     drawerOpen = false;
     drawer.classList.add('translate-x-full');
     
+    // Keep zoom controls fixed at default position
+
     // Hide drawer completely only after transition ends
     const handleTransition = (e) => {
       if (e.propertyName === 'transform') {
