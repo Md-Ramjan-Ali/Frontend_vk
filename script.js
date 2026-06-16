@@ -240,5 +240,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  closeDrawer();
+  // Open T1 by default on page load
+  populateDrawer('T1');
+  openDrawer();
 });
