@@ -34,19 +34,15 @@
 
       /* Premium hover effects for nodes */
       .cursor-pointer {
-        transition: opacity 0.2s ease;
-      }
-      .cursor-pointer > div:first-child {
         transition:
           transform 0.2s cubic-bezier(0.4, 0, 0.2, 1),
-          filter 0.2s ease;
+          filter 0.2s ease,
+          opacity 0.2s ease;
         transform-origin: center;
       }
-      .cursor-pointer:hover > div:first-child {
-        transform: scale(1.15) !important;
-        filter: drop-shadow(0 4px 12px rgba(2, 178, 79, 0.45));
-      }
       .cursor-pointer:hover {
+        transform: scale(1.15) !important;
+        filter: drop-shadow(0 4px 14px rgba(0, 0, 0, 0.3));
         opacity: 0.95;
       }
 
@@ -59,6 +55,28 @@
       #drawer-panel.translate-x-full {
         transform: translateX(100%);
         opacity: 0.8;
+      }
+
+      /* ── Number Box / Purple Box Text Stability Fix ──────────────
+         Root cause: pl-[12.8px] pr-[12.79px] squeezes text area to
+         only ~18px wide, causing long labels (e.g. BTT10) to wrap
+         into 2 lines and shift the text upward.
+         Fix: reduce horizontal padding → text stays on 1 line and
+         remains vertically centered regardless of character count. */
+      [class*="w-[64px]"].cursor-pointer [class*="pl-[12.8px]"] {
+        padding-left: 4px !important;
+        padding-right: 4px !important;
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+      }
+      /* Clip any overflow so text never visually escapes the box */
+      [class*="w-[64px]"].cursor-pointer {
+        overflow: hidden;
+      }
+      /* Ensure text stays on a single line inside the box */
+      [class*="w-[64px]"].cursor-pointer p {
+        white-space: nowrap;
+        margin: 0;
       }
     </style>
   </head>
@@ -246,10 +264,10 @@
                   class="absolute bg-transparent h-[22.586px] left-0 top-0 w-[172.57px]"
                 ></div>
                 <div
-                  class="-translate-x-1/2 -translate-y-1/2 [word-break:break-word] absolute flex flex-col font-[&#x27;Open_Sans:SemiBold&#x27;,sans-serif] font-semibold justify-center leading-[0] left-1/2 text-[#0f1117] text-[14px] text-center top-1/2 tracking-[0.3555px] whitespace-nowrap"
+                  class="-translate-x-1/2 -translate-y-1/2 [word-break:break-word] absolute flex flex-col font-['Open_Sans:SemiBold',sans-serif] font-semibold justify-center leading-[0] left-1/2 text-white text-[14px] text-center top-1/2 tracking-[0.3555px] whitespace-nowrap"
                   style="font-variation-settings: &quot;wdth&quot; 100"
                 >
-                  <p class="leading-[20px]">TE</p>
+                  <p class="leading-[20px] text-white" style="color: #ffffff !important;">TE</p>
                 </div>
               </div>
               <div
@@ -278,7 +296,7 @@
                           d="M92.1318 0.5L112.839 14.5811L92.1396 27.8291H0.5V0.5H92.1318Z"
                           fill="var(--fill-0, #E8E8E6)"
                           id="Rectangle 3"
-                          stroke="var(--stroke-0, #AFB4B7)"
+                          stroke="var(--stroke-0, black)"
                         ></path>
                       </svg>
                     </div>
@@ -308,7 +326,7 @@
                           d="M92.1318 0.5L112.839 14.5811L92.1396 27.8291H1.55371L19.416 15L19.9648 14.6055L19.4277 14.1963L1.47949 0.5H92.1318Z"
                           fill="var(--fill-0, #E8E8E6)"
                           id="Rectangle 3"
-                          stroke="var(--stroke-0, #AFB4B7)"
+                          stroke="var(--stroke-0, black)"
                         ></path>
                       </svg>
                     </div>
@@ -338,7 +356,7 @@
                           d="M92.1318 0.5L112.839 14.5811L92.1396 27.8291H1.55371L19.416 15L19.9648 14.6055L19.4277 14.1963L1.47949 0.5H92.1318Z"
                           fill="var(--fill-0, #E8E8E6)"
                           id="Rectangle 3"
-                          stroke="var(--stroke-0, #AFB4B7)"
+                          stroke="var(--stroke-0, black)"
                         ></path>
                       </svg>
                     </div>
@@ -370,7 +388,7 @@
                           d="M154.63 0.5L175.34 14.5811L154.64 27.8291H1.55371L19.416 15L19.9648 14.6055L19.4277 14.1963L1.47949 0.5H154.63Z"
                           fill="var(--fill-0, #E8E8E6)"
                           id="Rectangle 3"
-                          stroke="var(--stroke-0, #AFB4B7)"
+                          stroke="var(--stroke-0, black)"
                         ></path>
                       </svg>
                     </div>
@@ -381,7 +399,7 @@
                       class="-translate-x-1/2 -translate-y-1/2 [word-break:break-word] absolute flex flex-col font-['Open_Sans:SemiBold',sans-serif] font-semibold justify-center leading-[0] left-[calc(50%-3.8px)] text-[#0f1117] text-[10.078px] text-center top-1/2 tracking-[0.2559px] whitespace-nowrap"
                       style="font-variation-settings: &quot;wdth&quot; 100"
                     >
-                      <p class="leading-[14.398px] text-[#E5E5E5]">4</p>
+                      <p class="leading-[14.398px]">4</p>
                     </div>
                   </div>
                 </div>
@@ -405,10 +423,10 @@
                     >
                       <div class="-rotate-90 flex-none">
                         <div
-                          class="[word-break:break-word] flex flex-col font-[&#x27;Open_Sans:SemiBold&#x27;,sans-serif] font-semibold justify-center leading-[0] relative text-[#0f1117] text-[14.442px] text-center tracking-[0.3667px] whitespace-nowrap"
+                          class="[word-break:break-word] flex flex-col font-[&#x27;Open_Sans:SemiBold&#x27;,sans-serif] font-semibold justify-center leading-[0] relative text-white text-[14.442px] text-center tracking-[0.3667px] whitespace-nowrap"
                           style="font-variation-settings: &quot;wdth&quot; 100"
                         >
-                          <p class="leading-[20.632px]">TE</p>
+                          <p class="leading-[20.632px] text-white" style="color: #ffffff !important;">TE</p>
                         </div>
                       </div>
                     </div>
@@ -654,7 +672,7 @@
                   d="M174.419 0.5L194.176 14.5811L174.428 27.8291H1.49414L18.5293 14.9932L19.0439 14.6055L18.541 14.2031L1.4248 0.5H174.419Z"
                   fill="var(--fill-0, #CAD4DD)"
                   id="Rectangle 3"
-                  stroke="var(--stroke-0, #AEBAC6)"
+                  stroke="var(--stroke-0, black)"
                 ></path>
               </svg>
             </div>
@@ -682,7 +700,7 @@
                     d="M171.221 0.5L188.023 13.9756L171.217 27.8291H1.30371L15.6436 14.9307L16.0459 14.5693L15.6543 14.1973L1.25098 0.5H171.221Z"
                     fill="var(--fill-0, #CAD4DD)"
                     id="Rectangle 3"
-                    stroke="var(--stroke-0, #AEBAC6)"
+                    stroke="var(--stroke-0, black)"
                   ></path>
                 </svg>
               </div>
@@ -711,7 +729,7 @@
                     d="M171.188 0.5L185.265 14.583L171.197 27.8291H1.30371L15.6436 14.9307L16.0459 14.5693L15.6543 14.1973L1.25098 0.5H171.188Z"
                     fill="var(--fill-0, #CAD4DD)"
                     id="Rectangle 3"
-                    stroke="var(--stroke-0, #AEBAC6)"
+                    stroke="var(--stroke-0, black)"
                   ></path>
                 </svg>
               </div>
@@ -738,7 +756,7 @@
                     d="M171.188 0.5L185.265 14.583L171.197 27.8291H0.5V0.5H171.188Z"
                     fill="var(--fill-0, #CAD4DD)"
                     id="Rectangle 3"
-                    stroke="var(--stroke-0, #AEBAC6)"
+                    stroke="var(--stroke-0, black)"
                   ></path>
                 </svg>
               </div>
@@ -769,7 +787,7 @@
                     d="M205.745 0.5L228.985 14.3906L205.749 27.8291H1.66602L20.9492 15.1094L21.5586 14.707L20.9629 14.2842L1.56641 0.5H205.745Z"
                     fill="var(--fill-0, #CAD4DD)"
                     id="Rectangle 3"
-                    stroke="var(--stroke-0, #AEBAC6)"
+                    stroke="var(--stroke-0, black)"
                   ></path>
                 </svg>
               </div>
@@ -1951,7 +1969,7 @@
                           d="M34.0248 29.7158H0.865664L17.4448 1L34.0248 29.7158Z"
                           fill="var(--fill-0, #E4E6E5)"
                           id="Polygon 3"
-                          stroke="var(--stroke-0, #9DA5A8)"
+                          stroke="var(--stroke-0, black)"
                         ></path>
                       </svg>
                     </div>
@@ -1963,7 +1981,7 @@
               >
                 <div
                   aria-hidden="true"
-                  class="absolute border border-[#a0a4a4] border-solid inset-0 pointer-events-none"
+                  class="absolute border border-black border-solid inset-0 pointer-events-none"
                 ></div>
                 <div
                   class="[word-break:break-word] flex flex-col font-[&#x27;Open_Sans:Bold&#x27;,sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[12px] text-black text-center tracking-[0.5977px] whitespace-nowrap"
@@ -1991,7 +2009,7 @@
                         d="M34.0248 29.7158H0.865664L17.4448 1L34.0248 29.7158Z"
                         fill="var(--fill-0, #E4E6E5)"
                         id="Polygon 3"
-                        stroke="var(--stroke-0, #9DA5A8)"
+                        stroke="var(--stroke-0, black)"
                       ></path>
                     </svg>
                   </div>
@@ -2004,7 +2022,7 @@
             >
               <div
                 aria-hidden="true"
-                class="absolute border border-[#a0a4a4] border-solid inset-0 pointer-events-none"
+                class="absolute border border-black border-solid inset-0 pointer-events-none"
               ></div>
               <div
                 class="[word-break:break-word] flex flex-col font-[&#x27;Open_Sans:Bold&#x27;,sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[12px] text-black text-center tracking-[0.5977px] whitespace-nowrap"
@@ -2020,7 +2038,7 @@
                 class="content-stretch flex flex-col gap-[8px] items-start relative shrink-0 w-[175px]"
               >
                 <div
-                  class="content-stretch flex gap-[6px] items-center relative shrink-0"
+                  class="content-stretch flex gap-[6px] items-center min-h-[52px] relative shrink-0"
                 >
                   <div class="relative shrink-0 size-[44.079px]">
                     <div
@@ -2039,7 +2057,7 @@
                   </div>
                 </div>
                 <div
-                  class="content-stretch flex gap-[6px] items-center relative shrink-0 w-full"
+                  class="content-stretch flex gap-[6px] items-center min-h-[52px] relative shrink-0 w-full"
                 >
                   <div
                     class="bg-[#012265] h-[37px] relative rounded-[4px] shrink-0 w-[64px]"
@@ -2062,7 +2080,7 @@
                   </div>
                 </div>
                 <div
-                  class="content-stretch flex gap-[6px] items-center relative shrink-0 w-[175px]"
+                  class="content-stretch flex gap-[6px] items-center min-h-[52px] relative shrink-0 w-[175px]"
                 >
                   <div
                     class="bg-[#6d349d] h-[24px] relative rounded-[4px] shrink-0 w-[64px]"
@@ -2079,7 +2097,7 @@
                   </div>
                 </div>
                 <div
-                  class="content-stretch flex gap-[6px] items-center relative shrink-0"
+                  class="content-stretch flex gap-[6px] items-center min-h-[52px] relative shrink-0"
                 >
                   <div class="h-[48.478px] relative shrink-0 w-[43.374px]">
                     <svg
@@ -2212,7 +2230,7 @@
                         d="M92.1318 0.5L112.839 14.5811L92.1396 27.8291H0.5V0.5H92.1318Z"
                         fill="var(--fill-0, #F5F0D8)"
                         id="Rectangle 3"
-                        stroke="var(--stroke-0, #AFB4B7)"
+                        stroke="var(--stroke-0, black)"
                       ></path>
                     </svg>
                   </div>
@@ -2240,7 +2258,7 @@
                         d="M92.1318 0.5L112.839 14.5811L92.1396 27.8291H1.55371L19.416 15L19.9648 14.6055L19.4277 14.1963L1.47949 0.5H92.1318Z"
                         fill="var(--fill-0, #F5F0D8)"
                         id="Rectangle 3"
-                        stroke="var(--stroke-0, #AFB4B7)"
+                        stroke="var(--stroke-0, black)"
                       ></path>
                     </svg>
                   </div>
@@ -2268,7 +2286,7 @@
                         d="M92.1318 0.5L112.839 14.5811L92.1396 27.8291H1.55371L19.416 15L19.9648 14.6055L19.4277 14.1963L1.47949 0.5H92.1318Z"
                         fill="var(--fill-0, #F5F0D8)"
                         id="Rectangle 3"
-                        stroke="var(--stroke-0, #AFB4B7)"
+                        stroke="var(--stroke-0, black)"
                       ></path>
                     </svg>
                   </div>
@@ -2294,7 +2312,7 @@
                         d="M92.1318 0.5L112.839 14.5811L92.1396 27.8291H1.55371L19.416 15L19.9648 14.6055L19.4277 14.1963L1.47949 0.5H92.1318Z"
                         fill="var(--fill-0, #F5F0D8)"
                         id="Rectangle 3"
-                        stroke="var(--stroke-0, #AFB4B7)"
+                        stroke="var(--stroke-0, black)"
                       ></path>
                     </svg>
                   </div>
@@ -2366,7 +2384,7 @@
                         d="M171.188 0.5L185.265 14.583L171.197 27.8291H0.5V0.5H171.188Z"
                         fill="var(--fill-0, #F5F0D8)"
                         id="Rectangle 3"
-                        stroke="var(--stroke-0, #AEBAC6)"
+                        stroke="var(--stroke-0, black)"
                       ></path>
                     </svg>
                   </div>
@@ -2393,7 +2411,7 @@
                         d="M171.188 0.5L185.265 14.583L171.197 27.8291H1.30371L15.6436 14.9307L16.0459 14.5693L15.6543 14.1973L1.25098 0.5H171.188Z"
                         fill="var(--fill-0, #F5F0D8)"
                         id="Rectangle 3"
-                        stroke="var(--stroke-0, #AEBAC6)"
+                        stroke="var(--stroke-0, black)"
                       ></path>
                     </svg>
                   </div>
